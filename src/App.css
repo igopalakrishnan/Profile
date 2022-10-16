@@ -383,6 +383,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
+@media only screen and (max-width: 600px) {
+  .project .nav.nav-pills {
+    width: 100%;
+  }
+}
+
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
 }

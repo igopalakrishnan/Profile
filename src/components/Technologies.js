@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import tech1 from "../assets/img/tech1.svg";
+import tech2 from "../assets/img/tech2.svg";
+import tech3 from "../assets/img/tech3.svg";
+import tech4 from "../assets/img/tech4.svg";
+import tech5 from "../assets/img/tech5.svg";
+import tech6 from "../assets/img/tech6.svg";
+import tech7 from "../assets/img/tech7.svg";
 import Carousel from 'react-multi-carousel';
 
 const Newsletter = () => {
@@ -35,20 +39,25 @@ const Newsletter = () => {
                         <div className="technologies-bx wow zoomIn">
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme technologies-slider">
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                    <h5>Web Development</h5>
+                                    <img src={tech1} alt="Image" />
                                 </div>
                                 <div className="item">
-                                    <img src={meter2} alt="Image" />
-                                    <h5>Brand Identity</h5>
+                                    <img src={tech2} alt="Image" />
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="Image" />
-                                    <h5>Logo Design</h5>
+                                    <img src={tech3} alt="Image" />
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                    <h5>Web Development</h5>
+                                    <img src={tech4} alt="Image" />
+                                </div>
+                                <div className="item">
+                                    <img src={tech5} alt="Image" />
+                                </div>
+                                <div className="item">
+                                    <img src={tech6} alt="Image" />
+                                </div>
+                                <div className="item">
+                                    <img src={tech7} alt="Image" />
                                 </div>
                             </Carousel>
                         </div>

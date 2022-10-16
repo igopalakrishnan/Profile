@@ -6,11 +6,13 @@ import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/nav-icon4.svg';
 import { HashLink } from 'react-router-hash-link';
-import {
-    BrowserRouter as Router
-} from "react-router-dom";
+import Banner from "./Banner";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import Footer from "./Footer";
 
- const NavBar = () => {
+const NavBar = () => {
 
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
@@ -34,8 +36,8 @@ import {
     }
 
     return (
-        <Router>
-            <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+        <>
+            <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
                 <Container>
                     <Navbar.Brand href="/">
                         <img src={logo} alt="Logo" />
@@ -63,7 +65,12 @@ import {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </Router>
+            <Banner />
+            <Skills />
+            <Projects />
+            <Contact />
+            <Footer />
+        </>
     )
 }
 

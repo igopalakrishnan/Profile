@@ -3,10 +3,9 @@ import React from 'react'
 const SignalClone = (props) => {
     console.log(props)
     return (
-        <div >
-           {/*  {props.match.params.id} */}
-           hi
-        </div>
+        <section className="signal" id="signal">
+            <div>hi</div>
+        </section>
     )
 }
 

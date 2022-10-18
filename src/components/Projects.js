@@ -113,7 +113,7 @@ const Projects = () => {
                                                     <Link style={{
                                                         textDecoration: "none",
                                                         color: "#fff"
-                                                    }} to="/signal" target="_blank">More Info
+                                                    }} to={`${process.env.PUBLIC_URL}/signal`} target="_blank">More Info
                                                         <ArrowRightCircle size={27} />
                                                     </Link>
                                                 </button>

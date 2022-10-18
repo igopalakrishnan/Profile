@@ -16,12 +16,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/Profile" element={<NavBar />} />
-          <Route path="/banner" element={<Banner />} />
+          {/* <Route path="/banner" element={<Banner />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/footer" element={<Footer />} />
-          <Route path="/signal" element={<SignalClone />} />
+  <Route path="/footer" element={<Footer />} /> */}
+          <Route path={process.env.PUBLIC_URL + '/signal'} element={<SignalClone />} />
         </Routes>
       </BrowserRouter>
     </div>

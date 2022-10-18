@@ -21,7 +21,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
   <Route path="/footer" element={<Footer />} /> */}
-          <Route path={process.env.PUBLIC_URL + '/signal'} element={<SignalClone />} />
+          <Route path="/signal" element={<SignalClone />} />
         </Routes>
       </BrowserRouter>
     </div>

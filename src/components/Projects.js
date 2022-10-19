@@ -14,7 +14,6 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { Link } from "react-router-dom";
 
 const Projects = () => {
 
@@ -58,15 +57,15 @@ const Projects = () => {
             imgUrl: reactnativeImg1,
         },
         {
-            title: "Inshort Clone",
+            title: "Insta Clone",
             imgUrl: reactnativeImg2,
         },
         {
-            title: "Signal Clone",
+            title: "Inshort Clone",
             imgUrl: reactnativeImg3,
         },
         {
-            title: "Insta Clone",
+            title: "Signal Clone",
             imgUrl: reactnativeImg4,
         },
     ];

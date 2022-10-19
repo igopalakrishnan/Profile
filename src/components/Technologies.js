@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { Col, Row, Alert } from "react-bootstrap";
 import tech1 from "../assets/img/tech1.svg";
 import tech2 from "../assets/img/tech2.svg";
 import tech3 from "../assets/img/tech3.svg";

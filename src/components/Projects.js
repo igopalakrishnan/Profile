@@ -109,15 +109,9 @@ const Projects = () => {
 
                                                     }
                                                 </Row>
-                                                <button>
-                                                    <a style={{
-                                                        textDecoration: "none",
-                                                        color: "#fff"
-                                                    }} href="https://igopalakrishnan.github.io/html/Project.html" target="_blank">More Info
-                                                        <ArrowRightCircle size={27} />
-                                                    </a>
-                                                </button>
+                                               
                                             </Tab.Pane>
+                                           
                                             <Tab.Pane eventKey="second">
                                                 <Row >
                                                     {
@@ -133,14 +127,6 @@ const Projects = () => {
 
                                                     }
                                                 </Row>
-                                                <button>
-                                                    <Link style={{
-                                                        textDecoration: "none",
-                                                        color: "#fff"
-                                                    }} to="/signal" target="_blank">More Info
-                                                        <ArrowRightCircle size={27} />
-                                                    </Link>
-                                                </button>
                                             </Tab.Pane>
                                             <Tab.Pane eventKey="third">
                                                 <Row >
@@ -157,15 +143,15 @@ const Projects = () => {
 
                                                     }
                                                 </Row>
-                                                <button>
-                                                    <Link style={{
+                                            </Tab.Pane>
+                                            <button>
+                                                    <a style={{
                                                         textDecoration: "none",
                                                         color: "#fff"
-                                                    }} to="/signal" target="_blank">More Info
+                                                    }} href="https://igopalakrishnan.github.io/html/Project.html" target="_blank">More Info
                                                         <ArrowRightCircle size={27} />
-                                                    </Link>
+                                                    </a>
                                                 </button>
-                                            </Tab.Pane>
                                         </Tab.Content>
                                     </Tab.Container>
                                 </div>}

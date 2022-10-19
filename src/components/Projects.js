@@ -148,7 +148,7 @@ const Projects = () => {
                                                     <a style={{
                                                         textDecoration: "none",
                                                         color: "#fff"
-                                                    }} href="https://igopalakrishnan.github.io/html/Project.html" target="_blank">More Info
+                                                    }} href="https://igopalakrishnan.github.io/Profile-Projects" target="_blank">More Info
                                                         <ArrowRightCircle size={27} />
                                                     </a>
                                                 </button>

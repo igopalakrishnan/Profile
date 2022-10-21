@@ -1,15 +1,15 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import projImg1 from "../assets/img/project1-img1.png";
-import projImg2 from "../assets/img/project1-img2.png";
-import reactjsImg1 from "../assets/img/project2-img1.png";
-import reactjsImg2 from "../assets/img/project2-img2.png";
-import reactjsImg3 from "../assets/img/project2-img3.png";
-import reactjsImg4 from "../assets/img/project2-img4.png";
-import reactjsImg5 from "../assets/img/project2-img5.png";
-import reactnativeImg1 from "../assets/img/project3-img1.png";
-import reactnativeImg2 from "../assets/img/project3-img2.png";
-import reactnativeImg3 from "../assets/img/project3-img3.png";
-import reactnativeImg4 from "../assets/img/project3-img4.png";
+import Bookkeeping from "../assets/img/book-keeping.png";
+import ChatApp from "../assets/img/chatApp.png";
+import Client from "../assets/img/client.png";
+import Deliveroo from "../assets/img/deliveroo.png";
+import Ecommerce from "../assets/img/e-commerce.png";
+import Education from "../assets/img/education.png";
+import Instaclone from "../assets/img/Insta-clone.png";
+import Instagram from "../assets/img/Instagram.png";
+import News from "../assets/img/news.png";
+import Portfolio from "../assets/img/portfolio.png";
+import Signal from "../assets/img/signal.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -20,53 +20,97 @@ const Projects = () => {
     const projects = [
         {
             title: "Client Portal",
-            imgUrl: projImg1,
+            imgUrl: Client,
         },
         {
             title: "Course Tracker",
-            imgUrl: projImg2,
+            imgUrl: Education,
+        },
+        {
+            title: "Portfolio",
+            imgUrl: Portfolio,
+        },
+        {
+            title: "Instagram Clone",
+            imgUrl: Instagram,
+        },
+        {
+            title: "Chat App",
+            imgUrl: ChatApp,
+        },
+        {
+            title: "Book Keeping App",
+            imgUrl: Bookkeeping,
+        },
+        {
+            title: "E-commerce",
+            imgUrl: Ecommerce,
+        },
+        {
+            title: "Deliveroo Clone",
+            imgUrl: Deliveroo,
+        },
+        {
+            title: "Insta Clone",
+            imgUrl: Instaclone,
+        },
+        {
+            title: "Inshort Clone",
+            imgUrl: News,
+        },
+        {
+            title: "Signal Clone",
+            imgUrl: Signal,
         },
     ];
 
     const reactjs = [
         {
+            title: "Client Portal",
+            imgUrl: Client,
+        },
+        {
             title: "Portfolio",
-            imgUrl: reactjsImg1,
+            imgUrl: Portfolio,
         },
         {
             title: "Instagram Clone",
-            imgUrl: reactjsImg2,
+            imgUrl: Instagram,
         },
         {
             title: "Chat App",
-            imgUrl: reactjsImg3,
+            imgUrl: ChatApp,
         },
         {
             title: "Book Keeping App",
-            imgUrl: reactjsImg4,
+            imgUrl: Bookkeeping,
         },
         {
             title: "E-commerce",
-            imgUrl: reactjsImg5,
+            imgUrl: Ecommerce,
         },
     ];
 
     const reactnative = [
         {
             title: "Deliveroo Clone",
-            imgUrl: reactnativeImg1,
+            imgUrl: Deliveroo,
+        },
+        {
+            title: "Course Tracker",
+            imgUrl: Education,
         },
         {
             title: "Insta Clone",
-            imgUrl: reactnativeImg2,
+            imgUrl: Instaclone,
         },
         {
             title: "Inshort Clone",
-            imgUrl: reactnativeImg3,
+            imgUrl: News,
         },
         {
             title: "Signal Clone",
-            imgUrl: reactnativeImg4,
+            imgUrl: Signal,
         },
     ];
 
@@ -83,7 +127,7 @@ const Projects = () => {
                                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                             <Nav.Item>
-                                                <Nav.Link eventKey="first">Project</Nav.Link>
+                                                <Nav.Link eventKey="first">All Projects</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item>
                                                 <Nav.Link eventKey="second">React JS</Nav.Link>

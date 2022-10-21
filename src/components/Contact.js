@@ -10,7 +10,7 @@ const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    
+
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -26,9 +26,9 @@ const Contact = () => {
                 console.log(error.text);
             });
 
-            setName('');
-            setEmail('');
-            setMessage('');
+        setName('');
+        setEmail('');
+        setMessage('');
     };
 
     return (
@@ -51,29 +51,35 @@ const Contact = () => {
                                     <form ref={form} onSubmit={sendEmail}>
                                         <Row>
                                             <Col size={12} sm={6} className="px-1">
-                                                <input 
-                                                type="text" 
-                                                placeholder="First Name" 
-                                                name="name"
-                                                value={name}
-                                                onChange={(e) => setName(e.target.value)}
-                                                 />
+                                                <input
+                                                    required
+                                                    type="text"
+                                                    placeholder="First Name"
+                                                    name="name"
+                                                    value={name}
+                                                    onChange={(e) => setName(e.target.value)}
+                                                />
                                             </Col>
                                             <Col size={12} sm={6} className="px-1">
-                                                <input 
-                                                type="email" 
-                                                placeholder="Email Address" 
-                                                name="email"
-                                                value={email}
-                                                onChange={(e) => setEmail(e.target.value)}
-                                                 />
+                                                <input
+                                                    required
+                                                    type="email"
+                                                    placeholder="Email Address"
+                                                    name="email"
+                                                    value={email}
+                                                    onChange={(e) => setEmail(e.target.value)}
+                                                />
                                             </Col>
-                                            <Col size={12} className="px-1">
-                                                <textarea rows="6" 
-                                                placeholder="Message" 
-                                                name="message"
-                                                value={message}
-                                                onChange={(e) => setMessage(e.target.value)}
+                                            <Col
+                                                size={12}
+                                                className="px-1">
+                                                <textarea
+                                                required
+                                                    rows="6"
+                                                    placeholder="Message"
+                                                    name="message"
+                                                    value={message}
+                                                    onChange={(e) => setMessage(e.target.value)}
                                                 ></textarea>
                                                 <button type="submit" value="Send"><span>Send</span></button>
                                             </Col>

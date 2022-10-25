@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.30f81aa8.css",
-    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.600754ad.js",
+    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.ae75832a.js",
     "static/js/787.f2a0fa2f.chunk.js": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/color-sharp.png": "https://igopalakrishnan.github.io/Profile/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "https://igopalakrishnan.github.io/Profile/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
-    "static/media/Resume.pdf": "https://igopalakrishnan.github.io/Profile/static/media/Resume.f486745f66a257d624fe.pdf",
+    "static/media/Resume.pdf": "https://igopalakrishnan.github.io/Profile/static/media/Resume.fe113f16fd98ebea682a.pdf",
     "static/media/banner-bg.png": "https://igopalakrishnan.github.io/Profile/static/media/banner-bg.cc1273af450504afe755.png",
     "static/media/header-img.svg": "https://igopalakrishnan.github.io/Profile/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
     "static/media/education.png": "https://igopalakrishnan.github.io/Profile/static/media/education.913488e3bed819940e84.png",
@@ -46,11 +46,11 @@
     "static/media/arrow1.svg": "https://igopalakrishnan.github.io/Profile/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
     "static/media/nav-icon2.svg": "https://igopalakrishnan.github.io/Profile/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
     "main.30f81aa8.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.30f81aa8.css.map",
-    "main.600754ad.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.600754ad.js.map",
+    "main.ae75832a.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.ae75832a.js.map",
     "787.f2a0fa2f.chunk.js.map": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30f81aa8.css",
-    "static/js/main.600754ad.js"
+    "static/js/main.ae75832a.js"
   ]
 }

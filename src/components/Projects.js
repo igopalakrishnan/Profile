@@ -151,9 +151,9 @@ const Projects = () => {
                                             <Nav.Item>
                                                 <Nav.Link eventKey="third">React Native</Nav.Link>
                                             </Nav.Item>
-                                            <Nav.Item>
+                                           {/*  <Nav.Item>
                                                 <Nav.Link eventKey="fourth">Next. JS</Nav.Link>
-                                            </Nav.Item>
+                                            </Nav.Item> */}
                                         </Nav>
                                         <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                                             <Tab.Pane eventKey="first">

@@ -383,14 +383,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 450px) {
   .project .nav.nav-pills {
     width: 100%;
   }
 }
 
 .project .nav.nav-pills .nav-item {
-  width: 25%;
+  width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -432,10 +432,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .nav-link#projects-tabs-tab-third {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-.nav-link#projects-tabs-tab-fourth {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }

@@ -10,6 +10,7 @@ import Instagram from "../assets/img/Instagram.png";
 import News from "../assets/img/news.png";
 import Portfolio from "../assets/img/portfolio.png";
 import Signal from "../assets/img/signal.png";
+import Spotify from "../assets/img/spotify.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -62,6 +63,10 @@ const Projects = () => {
             title: "Signal Clone",
             imgUrl: Signal,
         },
+        {
+            title: "Spotify 2.0",
+            imgUrl: Spotify,
+        },
     ];
 
     const reactjs = [
@@ -89,6 +94,10 @@ const Projects = () => {
             title: "E-commerce",
             imgUrl: Ecommerce,
         },
+        {
+            title: "Spotify 2.0",
+            imgUrl: Spotify,
+        },
     ];
 
     const reactnative = [
@@ -114,6 +123,13 @@ const Projects = () => {
         },
     ];
 
+    /* const nextjs = [
+        {
+            title: "Spotify 2.0",
+            imgUrl: Spotify,
+        },
+    ]; */
+
     return (
         <section className="project" id="projects">
             <Container>
@@ -134,6 +150,9 @@ const Projects = () => {
                                             </Nav.Item>
                                             <Nav.Item>
                                                 <Nav.Link eventKey="third">React Native</Nav.Link>
+                                            </Nav.Item>
+                                            <Nav.Item>
+                                                <Nav.Link eventKey="fourth">Next. JS</Nav.Link>
                                             </Nav.Item>
                                         </Nav>
                                         <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -187,6 +206,23 @@ const Projects = () => {
                                                     }
                                                 </Row>
                                             </Tab.Pane>
+
+                                            {/* <Tab.Pane eventKey="fourth">
+                                                <Row >
+                                                    {
+                                                        nextjs.map((project, index) =>
+                                                            <Col size={12} sm={6} md={4} key={index}>
+                                                                <div className="proj-imgbx">
+                                                                    <img src={project.imgUrl} />
+                                                                    <div className="proj-txtx">
+                                                                        <h4>{project.title}</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </Col>)
+
+                                                    }
+                                                </Row>
+                                            </Tab.Pane> */}
                                             <button>
                                                     <a style={{
                                                         textDecoration: "none",

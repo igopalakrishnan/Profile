@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.14274754.css",
-    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.809ef627.js",
+    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.ad3f4ba0.js",
     "static/js/787.f2a0fa2f.chunk.js": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/color-sharp.png": "https://igopalakrishnan.github.io/Profile/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "https://igopalakrishnan.github.io/Profile/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
@@ -18,6 +18,7 @@
     "static/media/signal.png": "https://igopalakrishnan.github.io/Profile/static/media/signal.bf5db4bd0ef04cb4ef14.png",
     "static/media/Insta-clone.png": "https://igopalakrishnan.github.io/Profile/static/media/Insta-clone.c28a360d20df432e1f58.png",
     "static/media/e-commerce.png": "https://igopalakrishnan.github.io/Profile/static/media/e-commerce.53a3d336be7a8f7dd3bc.png",
+    "static/media/movie.png": "https://igopalakrishnan.github.io/Profile/static/media/movie.c054714c1052072caa80.png",
     "static/media/deliveroo.png": "https://igopalakrishnan.github.io/Profile/static/media/deliveroo.08ed5dd7f35c00a2c35f.png",
     "static/media/portfolio.png": "https://igopalakrishnan.github.io/Profile/static/media/portfolio.da0570de8d50e58e6248.png",
     "static/media/spotify.png": "https://igopalakrishnan.github.io/Profile/static/media/spotify.e5c441acdc2efe85ca93.png",
@@ -47,11 +48,11 @@
     "static/media/arrow1.svg": "https://igopalakrishnan.github.io/Profile/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
     "static/media/nav-icon2.svg": "https://igopalakrishnan.github.io/Profile/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
     "main.14274754.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.14274754.css.map",
-    "main.809ef627.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.809ef627.js.map",
+    "main.ad3f4ba0.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.ad3f4ba0.js.map",
     "787.f2a0fa2f.chunk.js.map": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14274754.css",
-    "static/js/main.809ef627.js"
+    "static/js/main.ad3f4ba0.js"
   ]
 }

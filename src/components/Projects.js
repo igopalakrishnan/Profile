@@ -11,6 +11,7 @@ import News from "../assets/img/news.png";
 import Portfolio from "../assets/img/portfolio.png";
 import Signal from "../assets/img/signal.png";
 import Spotify from "../assets/img/spotify.png";
+import Movie from "../assets/img/movie.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -67,6 +68,10 @@ const Projects = () => {
             title: "Spotify 2.0",
             imgUrl: Spotify,
         },
+        {
+            title: "Disney Clone",
+            imgUrl: Movie,
+        },
     ];
 
     const reactjs = [
@@ -97,6 +102,10 @@ const Projects = () => {
         {
             title: "Spotify 2.0",
             imgUrl: Spotify,
+        },
+        {
+            title: "Disney Clone",
+            imgUrl: Movie,
         },
     ];
 

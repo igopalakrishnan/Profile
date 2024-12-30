@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.8ba32eba.css",
-    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.efb60816.js",
+    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.f4e50483.js",
     "static/js/787.f2a0fa2f.chunk.js": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/color-sharp.png": "https://igopalakrishnan.github.io/Profile/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "https://igopalakrishnan.github.io/Profile/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
-    "static/media/Resume.pdf": "https://igopalakrishnan.github.io/Profile/static/media/Resume.fe113f16fd98ebea682a.pdf",
     "static/media/banner-bg.png": "https://igopalakrishnan.github.io/Profile/static/media/banner-bg.cc1273af450504afe755.png",
     "static/media/header-img.svg": "https://igopalakrishnan.github.io/Profile/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
     "static/media/education.png": "https://igopalakrishnan.github.io/Profile/static/media/education.913488e3bed819940e84.png",
     "static/media/chatApp.png": "https://igopalakrishnan.github.io/Profile/static/media/chatApp.0186f4f99beda2834273.png",
+    "static/media/Resume.pdf": "https://igopalakrishnan.github.io/Profile/static/media/Resume.9d47c25ee0280f22ef6b.pdf",
     "static/media/news.png": "https://igopalakrishnan.github.io/Profile/static/media/news.5897581d9010006249db.png",
     "static/media/CentraNo2-Bold.ttf": "https://igopalakrishnan.github.io/Profile/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "https://igopalakrishnan.github.io/Profile/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
@@ -48,11 +48,11 @@
     "static/media/arrow1.svg": "https://igopalakrishnan.github.io/Profile/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
     "static/media/nav-icon2.svg": "https://igopalakrishnan.github.io/Profile/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
     "main.8ba32eba.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.8ba32eba.css.map",
-    "main.efb60816.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.efb60816.js.map",
+    "main.f4e50483.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.f4e50483.js.map",
     "787.f2a0fa2f.chunk.js.map": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8ba32eba.css",
-    "static/js/main.efb60816.js"
+    "static/js/main.f4e50483.js"
   ]
 }

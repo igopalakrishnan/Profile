@@ -1,0 +1,264 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background: #e0f7f7;
+  min-height: 50vh;
+}
+
+/* Photo frame effect */
+.photo-frame {
+  position: relative;
+  display: inline-block;
+  background: #ffe5d0; /* frame background */
+  border: 20px solid #f5f5f5; /* thick frame border */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transform: rotate(-10deg); /* slight tilt */
+  transition: transform 0.4s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Apply translateY only for screens wider than 1024px */
+@media (min-width: 1024px) {
+  .photo-frame {
+    transform: rotate(-13deg) translateY(45px); /* tilt + move down */
+  }
+}
+
+.photo-frame img {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Initial state for the whole photo-frame */
+.photo-frame {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.8) rotate(-10deg);
+}
+
+/* Animate when hero section is visible */
+.hero.in-view .photo-frame {
+  animation: bounceCard 1s ease forwards, glowPulse 2s ease-in-out 1.2s infinite;
+}
+
+@keyframes bounceCard {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.8) rotate(-10deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px) scale(1.05) rotate(-10deg); /* overshoot */
+  }
+  80% {
+    transform: translateY(-10px) scale(0.95) rotate(-10deg); /* bounce back */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(45px) scale(1) rotate(-13deg); /* settle */
+  }
+}
+
+/* Subtle glowing pulse around the frame */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 127, 80, 0.4),
+                0 0 20px rgba(255, 127, 80, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 127, 80, 0.6),
+                0 0 40px rgba(255, 127, 80, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 127, 80, 0.4),
+                0 0 20px rgba(255, 127, 80, 0.3);
+  }
+}
+
+
+/* Caption attached to frame bottom */
+.frame-caption {
+  display: block;
+  background: #f5f5f5;
+  color: #ff7f50;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px;
+  letter-spacing: 1px;
+  /* border-top: 2px solid #005fa3; */
+}
+
+/* Right side content */
+.hero-content {
+  flex: 1;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #008080;
+}
+
+/* Social icons row */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.social-icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* round shape */
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ff7f50;
+  border: 2px solid #008080;
+  background: #f5f5f5;
+  /* ✨ Smooth transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+/* Individual platform colors */
+.icon.website {
+  background: #f5f5f5;
+  border: 2px solid #008080;
+}
+
+.icon.github {
+  background: #f5f5f5;
+  border: 2px solid #008080;
+}
+
+.icon.linkedin {
+  background: #f5f5f5;
+  border: 2px solid #008080;
+}
+
+.icon.facebook {
+  background: #f5f5f5;
+  border: 2px solid #008080;
+}
+
+.icon.instagram {
+  background: #f5f5f5;
+  border: 2px solid #008080;
+}
+
+/* Social icons stagger */
+.social-icons .icon {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero.in-view .social-icons .icon {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.hero.in-view .social-icons .icon:nth-child(1) { animation-delay: 1s; }
+.hero.in-view .social-icons .icon:nth-child(2) { animation-delay: 1.2s; }
+.hero.in-view .social-icons .icon:nth-child(3) { animation-delay: 1.4s; }
+.hero.in-view .social-icons .icon:nth-child(4) { animation-delay: 1.6s; }
+.hero.in-view .social-icons .icon:nth-child(5) { animation-delay: 1.8s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effect */
+.social-icons .icon:hover {
+  transform: translateY(-5px) scale(1.2) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  background: #e0f7f7;
+  border: 2px solid #ff7f50;
+  color: #008080;
+}
+
+
+/* Buttons stagger */
+.hero-buttons .btn {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero.in-view .hero-buttons .btn {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.hero.in-view .hero-buttons .btn:nth-child(1) { animation-delay: 2s; }
+.hero.in-view .hero-buttons .btn:nth-child(2) { animation-delay: 2.2s; }
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.btn {
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Primary button with gradient hover */
+.btn.primary {
+  border: 2px solid #008080;
+  color: #008080;
+  background: linear-gradient(to right, #e0f7f7 50%, #008080 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+}
+
+.btn.primary:hover {
+  color: #ff7f50;
+  background-position: right bottom; /* animate left → right */
+  transform: scale(1.08); /* zoom effect */
+}
+
+/* Secondary button with gradient hover */
+.btn.secondary {
+    border: 2px solid #ff7f50;
+  background: linear-gradient(to left, #ffe5d0 50%, #ff7f50 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: #ff7f50;
+}
+
+.btn.secondary:hover {
+    color: #008080;
+  background-position: left bottom; /* animate left → right */
+  transform: scale(1.08); /* zoom effect */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .hero-content {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+  .photo-frame img {
+    max-width: 250px;
+  }
+}

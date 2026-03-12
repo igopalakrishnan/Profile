@@ -10,4 +10,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    
 }
+
+
+/* const colors = {
+  background: "#f5f5f5",       // Soft gray
+  primary: "#008080",          // Teal
+  accent: "#ff7f50",           // Coral orange
+  text: "#333333",             // Dark gray
+  button: "#ff7f50",           // Orange pill buttons
+  skillTeal: "#e0f7f7",        // Light teal pill
+  skillOrange: "#ffe5d0",      // Light orange pill
+}; */

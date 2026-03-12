@@ -1,0 +1,89 @@
+.skills-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200px 10%;
+  background: #f5f5f5;
+  flex-wrap: wrap;
+}
+
+/* Left image with glow */
+.skills-image .image-wrapper {
+  opacity: 0;
+  transform: translateY(-100px) scale(0.8);
+  animation: bounceIn 1s ease forwards, glowPulseTeal 2s ease-in-out 1.2s infinite;
+}
+
+.skills-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: translateY(-100px) scale(0.8); }
+  60% { opacity: 1; transform: translateY(20px) scale(1.05); }
+  80% { transform: translateY(-10px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes glowPulseTeal {
+  0% { box-shadow: 0 0 10px rgba(0, 128, 128, 0.4), 0 0 20px rgba(0, 128, 128, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(0, 128, 128, 0.6), 0 0 40px rgba(0, 128, 128, 0.4); }
+  100% { box-shadow: 0 0 10px rgba(0, 128, 128, 0.4), 0 0 20px rgba(0, 128, 128, 0.3); }
+}
+
+/* Right content */
+.skills-content {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.skills-content h2 {
+  font-size: 2.2rem;
+  color: #008080;
+  margin-bottom: 20px;
+}
+
+/* Pill-shaped skill tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill {
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: #e0f7f7;
+  color: #ff7f50;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid #008080;
+  transition: all 0.3s ease;
+}
+
+.pill:hover {
+  background: #008080;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .skills-image img {
+    width: 200px;
+    height: 200px;
+  }
+}

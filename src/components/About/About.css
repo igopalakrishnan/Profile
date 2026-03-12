@@ -1,0 +1,190 @@
+.about-section {
+  padding: 150px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffe5d04e;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between; /* evenly start and end */
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1 1 400px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateX(-80px); /* start off to the left */
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #008080;
+}
+
+span{
+    color: #ff7f50;
+}
+
+.about-image {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: flex-end; /* push image to right end */
+  align-items: center;
+  opacity: 0;
+  transform: translateX(80px); /* start off to the right */
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.about-image img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 1s ease,
+    opacity 1s ease;
+  transform: scale(0.8);
+  opacity: 0;
+  background: #e0f7f7;
+}
+
+/* Initial state for circular image */
+.about-image img {
+  opacity: 0;
+  transform: translateY(-100px) scale(0.8);
+  border-radius: 50%;
+}
+
+/* Bounce + teal glow when section is visible */
+.about-section.in-view .about-image img {
+  animation: bounceIn 1s ease forwards, glowPulseTeal 2s ease-in-out 1.2s infinite;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(20px) scale(1.05); /* overshoot */
+  }
+  80% {
+    transform: translateY(-10px) scale(0.95); /* bounce back */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* settle */
+  }
+}
+
+/* Light teal glowing pulse */
+@keyframes glowPulseTeal {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 128, 128, 0.4),
+                0 0 20px rgba(0, 128, 128, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 128, 128, 0.6),
+                0 0 40px rgba(0, 128, 128, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 128, 128, 0.4),
+                0 0 20px rgba(0, 128, 128, 0.3);
+  }
+}
+
+/* Caption fade-in after image lands */
+.caption {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.about-section.in-view .caption {
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 1.6s; /* starts after bounce finishes */
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.about-section.in-view .about-image img {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.about-section.in-view .about-text {
+  opacity: 1;
+  transform: translateX(0); /* slide into place */
+}
+
+.about-section.in-view .about-image {
+  opacity: 1;
+  transform: translateX(0); /* slide into place */
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caption {
+  margin-top: 12px;
+  padding: 6px 12px;
+  background: #e0f7f7;
+  color: #ff7f50;
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+}
+
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: center; /* center text on mobile */
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-image {
+    justify-content: center; /* center image on mobile */
+  }
+
+  .about-image img {
+    width: 220px;
+    height: 220px;
+  }
+}

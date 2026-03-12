@@ -1,0 +1,194 @@
+/* Navbar base */
+.navbar {
+  background-color: #f2f2f2;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1002;
+}
+
+/* Color when scrolled */
+.navbar.scrolled {
+  background-color: #e0f7f7; /* change to your preferred color */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #008080;
+}
+
+/* Desktop links */
+.desktop-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.desktop-links a {
+  text-decoration: none;
+  color: #008080;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.desktop-links a:hover {
+  color: #ff7f50;
+  transform: translateY(-3px) scale(1); /* subtle lift */
+  text-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Pill button style */
+.pill-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: #ff7f50;
+  color: #008080 !important;
+  border-radius: 50px; /* pill shape */
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  text-align: center;
+}
+
+.pill-btn:hover {
+  background-color: #e0f7f7;
+  color: #ff7f50 !important;
+  transform: translateY(-2px); /* subtle lift */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1005;
+  transition: transform 0.5s ease;
+}
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Morph into X */
+.hamburger.active {
+  transform: rotate(180deg); /* smooth spin */
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Canvas drawer */
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px 20px;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
+  transform: translateX(100%);
+  opacity: 0;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+  z-index: 1004;
+}
+.nav-links.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Hamburger inside canvas (top-right corner) */
+.nav-links .hamburger {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Staggered link animation */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  margin: 12px 0;
+  opacity: 0;
+  transform: translateX(20px);
+}
+.nav-links.open a {
+  animation: slideFadeIn 0.4s forwards;
+}
+.nav-links.open a:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.nav-links.open a:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.nav-links.open a:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.nav-links.open a:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Backdrop overlay with blur */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1001;
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .desktop-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

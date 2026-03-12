@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="logo">GK</div>
         <div className="desktop-links">
           <a href="/#">Home</a>
-          <a href="#about">About</a>
+          <a href="/#about">About</a>
           <a href="/services">Skills</a>
           <a href="/services">Projects</a>
           <a href="/contact" className="pill-btn">
@@ -55,7 +55,7 @@ const Navbar = () => {
         <a href="/#" onClick={() => setIsOpen(false)}>
           Home
         </a>
-        <a href="#about" onClick={() => setIsOpen(false)}>
+        <a href="/#about" onClick={() => setIsOpen(false)}>
           About
         </a>
         <a href="/services">Skills</a>

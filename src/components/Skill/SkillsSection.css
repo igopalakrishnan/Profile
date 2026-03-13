@@ -381,7 +381,7 @@
   }
   .pill-2 {
     left: 25%;
-    top: 30%;
+    top: 25%;
   }
   .pill-3 {
     left: 40%;
@@ -432,6 +432,10 @@
   .pill-3 {
     left: 40%;
     top: 80%;
+  }
+  .pill-4 {
+    left: 40%;
+    top: 60%;
   }
   .pill-5 {
     left: 75%;

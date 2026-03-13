@@ -66,12 +66,12 @@
   .skills-overlap {
     margin-top: -30px;
     width: 70%;
-    bottom: 35px;
+    bottom: -10px;
     padding: 0 10px;
-    left: 62%;
+    left: 60%;
   }
   .skills-section {
-    min-height: 20vh !important;
+    min-height: 15vh !important;
   }
 }
 @media (max-width: 1440px) {
@@ -86,42 +86,59 @@
     min-height: 20vh !important;
   }
 }
-@media (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (Max-width: 1440px) {
   .skills-overlap {
     margin-top: -30px;
     width: 70%;
     bottom: 0px;
     padding: 0 10px;
-    left: 60%;
-  }
-  .skills-section {
-    min-height: 20vh !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-overlap {
-    margin-top: -20px;
-    width: 70%;
-    bottom: 75px;
-    padding: 0 20px;
-    left: 62%;
+    left: 53%;
   }
   .skills-section {
     min-height: 30vh !important;
+    padding: 0 100px !important;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .skills-overlap {
+    margin-top: -20px;
+    width: 70%;
+    bottom: 25px;
+    padding: 0 20px;
+    left: 47%;
+  }
+  .skills-section {
+    min-height: 30vh !important;
+    padding: 0 100px !important;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .skills-overlap {
     margin-top: -10px;
     width: 70%;
     bottom: 10px;
     padding: 0 20px;
-    left: 60%;
+    left: 47%;
   }
   .skills-section {
     min-height: 30vh !important;
+    padding: 0 70px !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .skills-overlap {
+    margin-top: -10px;
+    width: 70%;
+    bottom: 10px;
+    padding: 0 20px;
+    left: 44%;
+  }
+  .skills-section {
+    min-height: 30vh !important;
+    padding: 0 55px !important;
   }
 }
 

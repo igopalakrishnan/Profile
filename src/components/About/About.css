@@ -283,6 +283,37 @@ span{
 
 
 /* 📱 Mobile responsiveness */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    padding: 0 10px;
+    text-align: center; /* center text on mobile */
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-image {
+    justify-content: center; /* center image on mobile */
+  }
+
+  .about-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
 @media (max-width: 768px) {
   .about-section {
     padding: 80px 20px;

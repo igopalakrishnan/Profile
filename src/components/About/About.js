@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
 import profileImage from "./about.png"; // use your transparent circular image
+import SkillsSection from "../Skill/SkillsSection";
 
 const About = () => {
   const ref = useRef(null);
@@ -26,10 +27,11 @@ const About = () => {
           <h2>About Me</h2>
           <p>
             <strong>
-              A skilled <span>Full Stack Developer</span> in designing and implementing web applications using a
-              variety of front-end and back-end technologies. Proficient in both
-              client-side and server-side development, with hands-on expertise
-              in<span> React.js, Node.js, Express, and MongoDB.</span>Passionate
+              A skilled <span>Full Stack Developer</span> in designing and
+              implementing web applications using a variety of front-end and
+              back-end technologies. Proficient in both client-side and
+              server-side development, with hands-on expertise in
+              <span> React.js, Node.js, Express, and MongoDB.</span>Passionate
               about continuous learning and staying updated with the latest
               industry trends and best practices.
             </strong>
@@ -42,6 +44,10 @@ const About = () => {
             <div className="caption">Meet Gokul</div>
           </div>
         </div>
+      </div>
+      {/* Skills section overlaps */}
+      <div className="skills-overlap">
+        <SkillsSection />
       </div>
     </section>
   );

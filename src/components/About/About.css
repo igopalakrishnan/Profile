@@ -1,6 +1,8 @@
 .about-section {
+  position: relative; /* allow absolute children */
   padding: 150px 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #ffe5d04e;
@@ -8,12 +10,119 @@
 
 .about-content {
   display: flex;
-  justify-content: space-between; /* evenly start and end */
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   width: 100%;
   flex-wrap: wrap;
   gap: 40px;
+  z-index: 2; /* keep text/image above background */
+}
+
+.skills-overlap {
+  position: absolute;
+   margin-top: -40px; /* slight overlap upward */
+  bottom: -80px; /* overlap into About section */
+  left: 60%;
+  transform: translateX(-50%) translateY(70%);
+  width: 80%;
+  z-index: 1; /* slightly behind text/image */
+  /* Float animation */
+  animation: floatBox 6s ease-in-out infinite;
+  transition: margin-top 0.6s ease, width 0.6s ease;
+}
+
+/* @keyframes floatBox {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+.skills-section {
+  border-radius: 50px;
+    /* Gradient border */
+  border: 10px solid transparent;
+  border-image: linear-gradient(90deg, #008080, #ff7f50);
+  border-image-slice: 1;
+  background: linear-gradient(135deg, #e0f7f7, #ffffff, #ffe5d0, #f9fdfd);
+  background-size: 400% 400%;
+  box-shadow:
+    0 0 25px rgba(0, 128, 128, 0.25),
+    inset 0 0 20px rgba(0, 128, 128, 0.15),
+    inset 0 0 30px rgba(255, 127, 80, 0.1);
+  animation: gradientShift 15s ease infinite;
+  overflow: hidden;
+  padding: 40px;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 1440px) {
+  .skills-overlap {
+    margin-top: -30px;
+    width: 100%;
+    bottom: 35px;
+    padding: 0 10px;
+    left: 62%;
+  }
+  .skills-section {
+    min-height: 20vh !important;
+  }
+}
+@media (max-width: 1440px) {
+  .skills-overlap {
+    margin-top: -30px;
+    width: 100%;
+    bottom: 35px;
+    padding: 0 10px;
+    left: 63%;
+  }
+  .skills-section {
+    min-height: 20vh !important;
+  }
+}
+@media (max-width: 1024px) {
+  .skills-overlap {
+    margin-top: -30px;
+    width: 100%;
+    bottom: 0px;
+    padding: 0 10px;
+    left: 60%;
+  }
+  .skills-section {
+    min-height: 20vh !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-overlap {
+    margin-top: -20px;
+    width: 100%;
+    bottom: 75px;
+    padding: 0 20px;
+    left: 62%;
+  }
+  .skills-section {
+    min-height: 30vh !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-overlap {
+    margin-top: -10px;
+    width: 100%;
+    bottom: 10px;
+    padding: 0 20px;
+    left: 60%;
+  }
+  .skills-section {
+    min-height: 30vh !important;
+  }
 }
 
 .about-text {

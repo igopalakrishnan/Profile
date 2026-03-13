@@ -1,28 +1,53 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./SkillsSection.css";
-import profile from "./skill.png"; // circular image
 
 const skills = [
-  "HTML", "CSS", "JavaScript", "React", "Node.js",
-  "TypeScript", "SASS", "Bootstrap", "Git", "MongoDB"
+  "HTML",
+  "CSS",
+  "Bootstrap",
+  "JavaScript",
+  "MongoDB",
+  "Express.js",
+  "React",
+  "Node.js",
+  "Git",
+  "TypeScript",
 ];
 
 const SkillsSection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            section.classList.add("in-view");
+          } else {
+            section.classList.remove("in-view");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (section) observer.observe(section);
+    section.classList.add("in-view");
+
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, []);
+
   return (
-    <section className="skills-section">
-      <div className="skills-image">
-        <div className="image-wrapper">
-          <img src={profile} alt="Profile" />
-        </div>
-      </div>
-      <div className="skills-content">
-        <h2>My Skills</h2>
-        <div className="skill-tags">
-          {skills.map((skill, index) => (
-            <span key={index} className="pill">{skill}</span>
-          ))}
-        </div>
-      </div>
+    <section ref={sectionRef} className="skills-section">
+      <h2 className="skills-heading">My Skills</h2>
+      {skills.map((skill, index) => (
+        <span key={index} className={`pill pill-${index + 1}`}>
+          {skill}
+        </span>
+      ))}
     </section>
   );
 };

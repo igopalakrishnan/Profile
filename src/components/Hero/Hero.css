@@ -256,7 +256,10 @@
   }
   .hero-content {
     padding-left: 0;
-    margin-top: 40px;
+    margin-top: 60px;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
   .photo-frame img {
     max-width: 250px;

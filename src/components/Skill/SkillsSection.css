@@ -1,89 +1,510 @@
 .skills-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200px 10%;
-  background: #f5f5f5;
-  flex-wrap: wrap;
+  position: relative;
+  width: 70%;
+  min-height: 50vh;
+  padding: 20px 20px;
+  text-align: center;
+  overflow: hidden;
+
+  /* Gradient background with animation */
+  background: linear-gradient(135deg, #e0f7f7, #ffffff, #ffe5d0, #f9fdfd);
+  background-size: 400% 400%;
+  border-radius: 50px;
+  /* Gradient border */
+  border: 10px solid transparent;
+  border-image-slice: 1;
+
+  /* Outer glow + inner recessed shadow */
+  box-shadow:
+    0 0 25px rgba(0, 128, 128, 0.25),
+    inset 0 0 20px rgba(0, 128, 128, 0.15),
+    inset 0 0 30px rgba(255, 127, 80, 0.1);
+
+  /* Animate gradient */
+  animation: gradientShift 15s ease infinite;
+
+  display: flex; /* enable flexbox */
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  text-align: center;
+  overflow: hidden;
 }
 
-/* Left image with glow */
-.skills-image .image-wrapper {
-  opacity: 0;
-  transform: translateY(-100px) scale(0.8);
-  animation: bounceIn 1s ease forwards, glowPulseTeal 2s ease-in-out 1.2s infinite;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.skills-image img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-@keyframes bounceIn {
-  0% { opacity: 0; transform: translateY(-100px) scale(0.8); }
-  60% { opacity: 1; transform: translateY(20px) scale(1.05); }
-  80% { transform: translateY(-10px) scale(0.95); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes glowPulseTeal {
-  0% { box-shadow: 0 0 10px rgba(0, 128, 128, 0.4), 0 0 20px rgba(0, 128, 128, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(0, 128, 128, 0.6), 0 0 40px rgba(0, 128, 128, 0.4); }
-  100% { box-shadow: 0 0 10px rgba(0, 128, 128, 0.4), 0 0 20px rgba(0, 128, 128, 0.3); }
-}
-
-/* Right content */
-.skills-content {
-  flex: 1;
-  padding-left: 40px;
-}
-
-.skills-content h2 {
-  font-size: 2.2rem;
+.skills-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
   color: #008080;
-  margin-bottom: 20px;
-}
-
-/* Pill-shaped skill tags */
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(0, 128, 128, 0.4);
+  position: relative;
+  z-index: 2;
 }
 
 .pill {
-  padding: 8px 16px;
+  position: absolute;
+  padding: 12px 24px;
   border-radius: 50px;
   background: #e0f7f7;
   color: #ff7f50;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   border: 2px solid #008080;
   transition: all 0.3s ease;
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(255, 127, 80, 0.6);
 }
 
 .pill:hover {
-  background: #008080;
-  color: #fff;
+  background: #ffe5d0;
+  border: 2px solid #ff7f50;
+  color: #008080;
   transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 128, 128, 0.8);
 }
 
-/* Responsive */
+/* Entrance animation */
+@keyframes fadeBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Drift variations */
+@keyframes driftUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+@keyframes driftRight {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(12px) rotate(-3deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+@keyframes driftLeft {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-12px) rotate(3deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+@keyframes driftDiagonal {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10px, -10px) rotate(-4deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* Glow variations */
+@keyframes glowTeal {
+  0% {
+    box-shadow: 0 0 12px rgba(0, 128, 128, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(0, 128, 128, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(0, 128, 128, 0.4);
+  }
+}
+@keyframes glowCoral {
+  0% {
+    box-shadow: 0 0 12px rgba(255, 127, 80, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(255, 127, 80, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(255, 127, 80, 0.4);
+  }
+}
+
+/* Assign unique combos + staggered delays */
+.skills-section.in-view .pill-1 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftUp 8s ease-in-out infinite,
+    glowTeal 4s ease-in-out infinite;
+  animation-delay: 0.4s, 0.4s, 0.4s;
+}
+.skills-section.in-view .pill-2 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftRight 7s ease-in-out infinite,
+    glowCoral 5s ease-in-out infinite;
+  animation-delay: 0.6s, 1s, 1.2s;
+}
+.skills-section.in-view .pill-3 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftLeft 9s ease-in-out infinite,
+    glowTeal 6s ease-in-out infinite;
+  animation-delay: 0.8s, 1.4s, 1.6s;
+}
+.skills-section.in-view .pill-4 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftDiagonal 10s ease-in-out infinite,
+    glowCoral 4s ease-in-out infinite;
+  animation-delay: 1s, 1.8s, 2s;
+}
+.skills-section.in-view .pill-5 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftUp 6s ease-in-out infinite,
+    glowTeal 5s ease-in-out infinite;
+  animation-delay: 1.2s, 2.2s, 2.4s;
+}
+.skills-section.in-view .pill-6 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftRight 8s ease-in-out infinite,
+    glowCoral 6s ease-in-out infinite;
+  animation-delay: 1.4s, 2.6s, 2.8s;
+}
+.skills-section.in-view .pill-7 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftLeft 7s ease-in-out infinite,
+    glowTeal 4s ease-in-out infinite;
+  animation-delay: 1.6s, 3s, 3.2s;
+}
+.skills-section.in-view .pill-8 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftDiagonal 9s ease-in-out infinite,
+    glowCoral 5s ease-in-out infinite;
+  animation-delay: 1.8s, 3.4s, 3.6s;
+}
+.skills-section.in-view .pill-9 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftUp 7s ease-in-out infinite,
+    glowTeal 6s ease-in-out infinite;
+  animation-delay: 2s, 3.8s, 4s;
+}
+.skills-section.in-view .pill-10 {
+  animation:
+    fadeBounce 0.6s ease forwards,
+    driftRight 9s ease-in-out infinite,
+    glowCoral 6s ease-in-out infinite;
+  animation-delay: 2.2s, 4.2s, 4.4s;
+}
+
+/* Fixed random-like positions for 10 pills */
+.pill-1 {
+  top: 25%;
+  left: 15%;
+}
+.pill-2 {
+  top: 35%;
+  left: 65%;
+}
+.pill-3 {
+  top: 50%;
+  left: 35%;
+}
+.pill-4 {
+  top: 65%;
+  left: 25%;
+}
+.pill-5 {
+  top: 30%;
+  left: 75%;
+}
+.pill-6 {
+  top: 55%;
+  left: 10%;
+}
+.pill-7 {
+  top: 75%;
+  left: 55%;
+}
+.pill-8 {
+  top: 40%;
+  left: 85%;
+}
+.pill-9 {
+  top: 33%;
+  left: 50%;
+}
+.pill-10 {
+  top: 60%;
+  left: 20%;
+}
+
+/* Responsive adjustments: pull pills inward */
+@media (min-width: 1440px) {
+  .skills-heading {
+    font-size: 2rem;
+  }
+  .pill {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  .pill-1 {
+    left: 10%;
+    top: 10%;
+  }
+  .pill-2 {
+    left: 25%;
+    top: 30%;
+  }
+  .pill-3 {
+    left: 40%;
+    top: 65%;
+  }
+  .pill-4 {
+    left: 60%;
+    top: 75%;
+  }
+  .pill-6 {
+    left: 5%;
+    top: 45%;
+  }
+  .pill-7 {
+    left: 80%;
+    top: 55%;
+  }
+  .pill-8 {
+    left: 55%;
+    top: 20%;
+  }
+  .pill-9 {
+    left: 40%;
+    top: 15%;
+  }
+  .pill-10 {
+    left: 15%;
+    top: 70%;
+  }
+}
+@media (max-width: 1440px) {
+  .skills-heading {
+    font-size: 2rem;
+  }
+  .pill {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  .pill-1 {
+    left: 10%;
+    top: 10%;
+  }
+  .pill-2 {
+    left: 25%;
+    top: 30%;
+  }
+  .pill-3 {
+    left: 40%;
+    top: 65%;
+  }
+  .pill-4 {
+    left: 60%;
+    top: 75%;
+  }
+  .pill-6 {
+    left: 5%;
+    top: 45%;
+  }
+  .pill-7 {
+    left: 80%;
+    top: 55%;
+  }
+  .pill-8 {
+    left: 55%;
+    top: 20%;
+  }
+  .pill-9 {
+    left: 40%;
+    top: 15%;
+  }
+  .pill-10 {
+    left: 15%;
+    top: 70%;
+  }
+}
+
+/* Responsive adjustments: pull pills inward */
+@media (max-width: 1024px) {
+  .skills-heading {
+    font-size: 2rem;
+  }
+  .pill {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  .pill-1 {
+    left: 10%;
+    top: 10%;
+  }
+  .pill-2 {
+    left: 25%;
+    top: 30%;
+  }
+  .pill-3 {
+    left: 40%;
+    top: 65%;
+  }
+  .pill-4 {
+    left: 60%;
+    top: 75%;
+  }
+  .pill-6 {
+    left: 5%;
+    top: 45%;
+  }
+  .pill-7 {
+    left: 80%;
+    top: 55%;
+  }
+  .pill-8 {
+    left: 55%;
+    top: 20%;
+  }
+  .pill-9 {
+    left: 40%;
+    top: 15%;
+  }
+  .pill-10 {
+    left: 15%;
+    top: 70%;
+  }
+}
+
 @media (max-width: 768px) {
-  .skills-section {
-    flex-direction: column;
-    text-align: center;
+  .skills-heading {
+    font-size: 1.8rem;
   }
-
-  .skills-content {
-    padding-left: 0;
-    margin-top: 30px;
+  .pill {
+    font-size: 0.85rem;
+    padding: 8px 16px;
   }
+  .pill-1 {
+    left: 10%;
+    top: 10%;
+  }
+  .pill-2 {
+    left: 55%;
+    top: 20%;
+  }
+  .pill-3 {
+    left: 40%;
+    top: 80%;
+  }
+  .pill-5 {
+    left: 75%;
+    top: 15%;
+  }
+  .pill-6 {
+    left: 5%;
+    top: 45%;
+  }
+  .pill-7 {
+    left: 75%;
+    top: 75%;
+  }
+  .pill-8 {
+    left: 75%;
+    top: 50%;
+  }
+  .pill-9 {
+    left: 35%;
+    top: 15%;
+  }
+  .pill-10 {
+    left: 5%;
+    top: 75%;
+  }
+}
 
-  .skills-image img {
-    width: 200px;
-    height: 200px;
+@media (max-width: 480px) {
+  .skills-heading {
+    font-size: 1.5rem;
+  }
+  .pill {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  .pill-1 {
+    left: 10%;
+    top: 10%;
+  }
+  .pill-2 {
+    left: 35%;
+    top: 20%;
+  }
+  .pill-3 {
+    left: 70%;
+    top: 35%;
+  }
+  .pill-4 {
+    left: 65%;
+    top: 55%;
+  }
+  .pill-5 {
+    left: 60%;
+    top: 10%;
+  }
+  .pill-6 {
+    left: 10%;
+    top: 55%;
+  }
+  .pill-7 {
+    left: 45%;
+    top: 65%;
+  }
+  .pill-8 {
+    left: 65%;
+    top: 80%;
+  }
+  .pill-9 {
+    left: 15%;
+    top: 35%;
+  }
+  .pill-10 {
+    left: 10%;
+    top: 80%;
   }
 }

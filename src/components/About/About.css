@@ -65,7 +65,7 @@
 @media screen and (min-width: 1440px) {
   .skills-overlap {
     margin-top: -30px;
-    width: 100%;
+    width: 70%;
     bottom: 35px;
     padding: 0 10px;
     left: 62%;
@@ -77,10 +77,10 @@
 @media (max-width: 1440px) {
   .skills-overlap {
     margin-top: -30px;
-    width: 100%;
+    width: 70%;
     bottom: 35px;
     padding: 0 10px;
-    left: 63%;
+    left: 60%;
   }
   .skills-section {
     min-height: 20vh !important;
@@ -89,7 +89,7 @@
 @media (max-width: 1024px) {
   .skills-overlap {
     margin-top: -30px;
-    width: 100%;
+    width: 70%;
     bottom: 0px;
     padding: 0 10px;
     left: 60%;
@@ -102,7 +102,7 @@
 @media (max-width: 768px) {
   .skills-overlap {
     margin-top: -20px;
-    width: 100%;
+    width: 70%;
     bottom: 75px;
     padding: 0 20px;
     left: 62%;
@@ -115,7 +115,7 @@
 @media (max-width: 480px) {
   .skills-overlap {
     margin-top: -10px;
-    width: 100%;
+    width: 70%;
     bottom: 10px;
     padding: 0 20px;
     left: 60%;

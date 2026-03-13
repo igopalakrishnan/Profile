@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.9328b86a.css",
+    "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.f9009eec.css",
     "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.bba52f58.js",
     "static/js/787.f2a0fa2f.chunk.js": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/profile.png": "https://igopalakrishnan.github.io/Profile/static/media/profile.4625e41ab4fcc5819447.png",
     "static/media/about.png": "https://igopalakrishnan.github.io/Profile/static/media/about.fdb65bf3330a579014e0.png",
     "index.html": "https://igopalakrishnan.github.io/Profile/index.html",
-    "main.9328b86a.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.9328b86a.css.map",
+    "main.f9009eec.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.f9009eec.css.map",
     "main.bba52f58.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.bba52f58.js.map",
     "787.f2a0fa2f.chunk.js.map": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9328b86a.css",
+    "static/css/main.f9009eec.css",
     "static/js/main.bba52f58.js"
   ]
 }

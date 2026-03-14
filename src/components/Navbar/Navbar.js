@@ -1,22 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll"; // for smooth section scroll
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -26,43 +19,35 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="logo">GK</div>
         <div className="desktop-links">
-          <a href="/#">Home</a>
-          <a href="/#about">About</a>
-          <a href="/services">Skills</a>
-          <a href="/services">Projects</a>
-          <a href="/contact" className="pill-btn">
+          {/* Smooth scroll links */}
+          <ScrollLink to="home" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Home</ScrollLink>
+          <ScrollLink to="about" smooth={true} duration={600} onClick={() => setIsOpen(false)}>About</ScrollLink>
+          <ScrollLink to="skills" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Skills</ScrollLink>
+          <ScrollLink to="projects" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Projects</ScrollLink>
+          <ScrollLink to="contact" smooth={true} duration={600} onClick={() => setIsOpen(false)} className="pill-btn">
             Contact Me
-          </a>
+          </ScrollLink>
         </div>
+
         {!isOpen && (
           <div className="hamburger" onClick={toggleMenu}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
+            <span className="bar"></span><span className="bar"></span><span className="bar"></span>
           </div>
         )}
       </nav>
 
+      {/* Mobile menu */}
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <div
-          className={`hamburger ${isOpen ? "active" : ""}`}
-          onClick={toggleMenu}
-        >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+        <div className={`hamburger ${isOpen ? "active" : ""}`} onClick={toggleMenu}>
+          <span className="bar"></span><span className="bar"></span><span className="bar"></span>
         </div>
-        <a href="/#" onClick={() => setIsOpen(false)}>
-          Home
-        </a>
-        <a href="/#about" onClick={() => setIsOpen(false)}>
-          About
-        </a>
-        <a href="/services">Skills</a>
-        <a href="/services">Projects</a>
-        <a href="/contact" className="pill-btn">
+        <ScrollLink to="home" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Home</ScrollLink>
+        <ScrollLink to="about" smooth={true} duration={600} onClick={() => setIsOpen(false)}>About</ScrollLink>
+        <ScrollLink to="skills" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Skills</ScrollLink>
+        <ScrollLink to="projects" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Projects</ScrollLink>
+        <ScrollLink to="contact" smooth={true} duration={600} onClick={() => setIsOpen(false)} className="pill-btn">
           Contact Me
-        </a>
+        </ScrollLink>
       </div>
 
       {isOpen && <div className="backdrop" onClick={toggleMenu}></div>}

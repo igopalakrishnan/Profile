@@ -1,24 +1,40 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import "./App.css";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
-// import SkillsSection from "./components/Skill/SkillsSection";
+import ProjectsPage from "./components/ProjectaPage/ProjectsPage";
+import Home from "./components/Home/Home";
 
-function App() {
+function Layout() {
+  const location = useLocation();
+
   return (
-    <div className="portfolio">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-    </div>
+    <>
+      {/* Show Navbar only on home route */}
+      {location.pathname === "/" && <Navbar />}
+
+      <Routes>
+        {/* Home route */}
+        <Route path="/" element={<Home />} />
+
+        {/* Projects page route */}
+        <Route path="/projectsPage" element={<ProjectsPage />} />
+      </Routes>
+    </>
   );
 }
 
-export default App;
-
+export default function App() {
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  );
+}
 
 // const colors = {
 //   background: "#f5f5f5",       // Soft gray
@@ -28,4 +44,4 @@ export default App;
 //   button: "#ff7f50",           // Orange pill buttons
 //   skillTeal: "#e0f7f7",        // Light teal pill
 //   skillOrange: "#ffe5d0",      // Light orange pill
-// }; 
+// };

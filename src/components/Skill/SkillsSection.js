@@ -41,7 +41,7 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="skills-section">
+    <section id="skills" ref={sectionRef} className="skills-section">
       <h2 className="skills-heading">Skills</h2>
       {skills.map((skill, index) => (
         <span key={index} className={`pill pill-${index + 1}`}>

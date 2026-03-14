@@ -25,7 +25,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={ref} className={`hero ${inView ? "in-view" : ""}`}>
+    <section id="hero" ref={ref} className={`hero ${inView ? "in-view" : ""}`}>
       <div className="hero-image">
         <div className="photo-frame">
           <img src={profile} alt="Hero" />

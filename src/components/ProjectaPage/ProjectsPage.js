@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Projects.css";
+import "./ProjectsPage.css";
 import gallery from "../../assets/projects/gallery.png";
 import portfolio from "../../assets/projects/portfolio.png";
 import todoList from "../../assets/projects/todoList.png";
 import { Link } from "react-router-dom";
 
-const projects = [
+const projectsPage = [
   {
     title: "Portfolio Website",
     desc: "Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...",
@@ -25,9 +25,15 @@ const projects = [
     img: todoList,
     link: "#",
   },
+  {
+    title: "Responsive ",
+    desc: "Canvas-style navbar...",
+    img: todoList,
+    link: "#",
+  },
 ];
 
-export default function Projects() {
+export default function ProjectsPage() {
   const [activeProject, setActiveProject] = useState(null);
 
   const sectionVariants = {
@@ -74,36 +80,46 @@ export default function Projects() {
 
   return (
     <>
+      <nav className="projectsPage-navbar">
+        <div className="logo">GK</div>
+        <Link to="/" className="home-link">
+          Home
+        </Link>
+        <div className="spacer"></div> {/* empty div to balance flex */}
+      </nav>
       <motion.section
-        id="projects"
-        className="projects-section"
+        id="projectsPage"
+        className="projectsPage-section"
         initial="hidden"
         whileInView="visible"
+        animate="visible"
         exit="exit"
-        // viewport={{ once: false, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         variants={sectionVariants}
       >
-        <h2 className="section-title">Projects</h2>
-        <div className="projects-grid">
-          {projects.map((proj, index) => {
+        <h2 className="section-title">All Projects</h2>
+        <div className="projectsPage-grid">
+          {projectsPage.map((proj, index) => {
             const glowClass = index % 2 === 0 ? "coral-glow" : "teal-glow";
             return (
               <motion.div
-                key={index}
-                className={`project-card ${glowClass}`}
+                key={proj.title} // use unique key instead of index
+                className={`projectsPage-card ${glowClass}`}
                 custom={index}
                 variants={cardVariants}
-                style={{ animationDelay: `${1 + index * 0.3}s` }}
                 onClick={() => setActiveProject({ ...proj, index })}
               >
-                <img src={proj.img} alt={proj.title} className="project-img" />
-                <h3 className="project-title">{proj.title}</h3>
-                {/* <p className="project-desc">{proj.desc}</p> */}
+                <img
+                  src={proj.img}
+                  alt={proj.title}
+                  className="projectsPage-img"
+                />
+                <h3 className="projectsPage-title">{proj.title}</h3>
                 <a
                   href={proj.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project-link"
+                  className="projectsPage-link"
                 >
                   View Code
                 </a>
@@ -111,8 +127,8 @@ export default function Projects() {
             );
           })}
         </div>
-        <div className="projects-footer">
-          <Link to="/projectsPage" className="projects-button">
+        <div className="projectsPage-footer">
+          <Link to="/projectsPage" className="projectsPage-button">
             See All Projects
           </Link>
         </div>

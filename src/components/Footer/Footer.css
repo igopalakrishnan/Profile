@@ -1,0 +1,80 @@
+.portfolio-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f1f1f;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-top: 2px solid coral;
+}
+
+/* Left: Logo */
+.footer-left {
+  flex: 1;
+}
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: coral;
+}
+
+/* Center: Phrase */
+.footer-center {
+  flex: 1;
+  text-align: center;
+}
+.footer-phrase {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: teal;
+  letter-spacing: 2px;
+}
+
+/* Right: Social icons */
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+.social-icon {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  color: teal;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.social-icon:hover {
+  color: coral;
+  transform: scale(1.2);
+}
+
+/* Floating Back to Top button */
+.back-to-top-floating {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: teal;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  cursor: pointer;
+  color: coral;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+.back-to-top-floating:hover {
+  background: coral;
+  color: teal;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-right {
+    margin-top: 1rem;
+  }
+}

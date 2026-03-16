@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.e02c7531.css",
-    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.963d27d9.js",
+    "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.3b194104.css",
+    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.0b36bcc1.js",
     "static/js/787.f2a0fa2f.chunk.js": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/gallery.png": "https://igopalakrishnan.github.io/Profile/static/media/gallery.48621dc460ffa018b538.png",
     "static/media/todoList.png": "https://igopalakrishnan.github.io/Profile/static/media/todoList.cec6722fadbc0dd5e60a.png",
     "static/media/profile.png": "https://igopalakrishnan.github.io/Profile/static/media/profile.4625e41ab4fcc5819447.png",
+    "static/media/bookKeeping.png": "https://igopalakrishnan.github.io/Profile/static/media/bookKeeping.88c114a03cd3720d1c9c.png",
     "static/media/portfolio.png": "https://igopalakrishnan.github.io/Profile/static/media/portfolio.2aca391a85996bf7703f.png",
     "static/media/about.png": "https://igopalakrishnan.github.io/Profile/static/media/about.fdb65bf3330a579014e0.png",
+    "static/media/chatApp.png": "https://igopalakrishnan.github.io/Profile/static/media/chatApp.a3144e1ded9382cc9d19.png",
     "static/media/letsTalk.png": "https://igopalakrishnan.github.io/Profile/static/media/letsTalk.57cf34eda53bcaee331e.png",
     "index.html": "https://igopalakrishnan.github.io/Profile/index.html",
-    "main.e02c7531.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.e02c7531.css.map",
-    "main.963d27d9.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.963d27d9.js.map",
+    "main.3b194104.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.3b194104.css.map",
+    "main.0b36bcc1.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.0b36bcc1.js.map",
     "787.f2a0fa2f.chunk.js.map": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e02c7531.css",
-    "static/js/main.963d27d9.js"
+    "static/css/main.3b194104.css",
+    "static/js/main.0b36bcc1.js"
   ]
 }

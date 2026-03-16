@@ -1,40 +1,49 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./ProjectsPage.css";
 import gallery from "../../assets/projects/gallery.png";
 import portfolio from "../../assets/projects/portfolio.png";
 import todoList from "../../assets/projects/todoList.png";
+import chatApp from "../../assets/projects/chatApp.png";
+import bookKeeping from "../../assets/projects/bookKeeping.png";
 import { Link } from "react-router-dom";
 
 const projectsPage = [
   {
     title: "Portfolio Website",
-    desc: "Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...",
+    desc: "Responsive portfolio...img: portfolio",
     img: portfolio,
-    link: "#",
+    link: "https://myprofilepo.netlify.app/",
   },
   {
-    title: "UI Animation Demo",
+    title: "Photo Collage",
     desc: "Interactive hero section...",
     img: gallery,
-    link: "#",
+    link: "https://weshinememories.netlify.app/",
   },
   {
-    title: "Responsive Navbar",
+    title: "ToDo List",
     desc: "Canvas-style navbar...",
     img: todoList,
     link: "#",
   },
   {
-    title: "Responsive ",
+    title: "Chat App Website",
     desc: "Canvas-style navbar...",
-    img: todoList,
+    img: chatApp,
+    link: "#",
+  },
+  {
+    title: "Book Keeping Website",
+    desc: "Canvas-style navbar...",
+    img: bookKeeping,
     link: "#",
   },
 ];
 
 export default function ProjectsPage() {
   const [activeProject, setActiveProject] = useState(null);
+   const [scrolled, setScrolled] = useState(false);
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -78,9 +87,15 @@ export default function ProjectsPage() {
     },
   };
 
+  useEffect(() => {
+      const handleScroll = () => setScrolled(window.scrollY > 50);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
   return (
     <>
-      <nav className="projectsPage-navbar">
+      <nav className={`projectsPage-navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="logo">GK</div>
         <Link to="/" className="home-link">
           Home

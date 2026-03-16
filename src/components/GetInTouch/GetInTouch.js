@@ -38,7 +38,7 @@ export default function GetInTouch() {
   };
 
   return (
-    <div className="getInTouch">
+    <div id="getInTouch" className="getInTouch">
       {/* Left side image */}
       <div className="getInTouch-left">
         <img src={contactImg} alt="Get in touch" />

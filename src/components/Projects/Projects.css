@@ -77,14 +77,14 @@
   box-shadow: inset 0 0 12px rgba(255, 127, 80, 0.4);
 }
 .projects-grid .project-card:nth-child(odd) .project-title {
-  color: coral;
+  color: teal;
 }
 .projects-grid .project-card:nth-child(odd) .project-desc {
   color: #ffd9c9;
 }
 .projects-grid .project-card:nth-child(odd) .project-link {
-  background: coral;
-  color: #fff;
+  background: teal;
+  color: coral;
 }
 
 .projects-grid .project-card:nth-child(even) {
@@ -93,14 +93,14 @@
   box-shadow: inset 0 0 12px rgba(0, 128, 128, 0.4);
 }
 .projects-grid .project-card:nth-child(even) .project-title {
-  color: teal;
+  color: coral;
 }
 .projects-grid .project-card:nth-child(even) .project-desc {
   color: #b2f5f5;
 }
 .projects-grid .project-card:nth-child(even) .project-link {
-  background: teal;
-  color: #fff;
+  background: coral;
+  color: teal;
 }
 
 /* Hover swaps everything */
@@ -119,10 +119,11 @@
   border-color: teal;
 }
 .projects-grid .project-card:nth-child(odd):hover .project-title {
-  color: teal;
+  color: coral;
 }
 .projects-grid .project-card:nth-child(odd):hover .project-link {
-  background: teal;
+  background: coral;
+  color: teal;
 }
 
 .projects-grid .project-card:nth-child(even):hover {
@@ -140,10 +141,11 @@
   border-color: coral;
 }
 .projects-grid .project-card:nth-child(even):hover .project-title {
-  color: coral;
+  color: teal;
 }
 .projects-grid .project-card:nth-child(even):hover .project-link {
-  background: coral;
+  background: teal;
+  color: coral;
 }
 
 /* Glow + Scale Animations */
@@ -232,7 +234,7 @@
 /* Close button ABOVE modal */
 .close {
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 5%;
   font-size: 2.5rem;
   color: #fff;
@@ -332,11 +334,13 @@
 }
 .coral-btn {
   text-align: center;
-  background: coral;
+  background: teal;
+  color: coral;
   animation: coralPulseBtn 3s infinite alternate;
 }
 .coral-btn:hover {
-  background: teal;
+  background: coral;
+  color: teal;
   box-shadow: 0 0 15px teal;
 }
 
@@ -356,11 +360,13 @@
 } */
 .teal-btn {
   text-align: center;
-  background: teal;
+  background: coral;
+  color: teal;
   animation: tealPulseBtn 3s infinite alternate;
 }
 .teal-btn:hover {
-  background: coral;
+  background: teal;
+  color: coral;
   box-shadow: 0 0 15px coral;
 }
 
@@ -409,13 +415,15 @@
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
-  background: coral;
-  color: #fff;
+  background: teal;
+  text-decoration: none;
+  color: coral;
   transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projects-button:hover {
-  background: teal;
+  background: coral;
+  color: teal;
   transform: scale(1.05);
   box-shadow: 0 0 15px teal;
 }

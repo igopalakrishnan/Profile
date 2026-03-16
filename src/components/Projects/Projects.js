@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Projects.css";
-import gallery from "../../assets/projects/gallery.png";
 import portfolio from "../../assets/projects/portfolio.png";
+import photoCollage from "../../assets/projects/gallery.png";
 import todoList from "../../assets/projects/todoList.png";
 import { Link } from "react-router-dom";
 
 const projects = [
   {
     title: "Portfolio Website",
-    desc: "Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...Responsive portfolio...",
+    desc: "Responsive portfolio",
     img: portfolio,
-    link: "#",
+    link: "https://myprofilepo.netlify.app/",
   },
   {
-    title: "UI Animation Demo",
+    title: "Chat App Website",
     desc: "Interactive hero section...",
-    img: gallery,
+    img: photoCollage,
     link: "#",
   },
   {
-    title: "Responsive Navbar",
+    title: "Book Keeping Website",
     desc: "Canvas-style navbar...",
     img: todoList,
     link: "#",
@@ -83,7 +83,7 @@ export default function Projects() {
         // viewport={{ once: false, amount: 0.1 }}
         variants={sectionVariants}
       >
-        <h2 className="section-title">Projects</h2>
+        <h2 className="section-title">Live Projects</h2>
         <div className="projects-grid">
           {projects.map((proj, index) => {
             const glowClass = index % 2 === 0 ? "coral-glow" : "teal-glow";

@@ -43,7 +43,9 @@
 
 /* Animate when hero section is visible */
 .hero.in-view .photo-frame {
-  animation: bounceCard 1s ease forwards, glowPulse 2s ease-in-out 1.2s infinite;
+  animation:
+    bounceCard 1s ease forwards,
+    glowPulse 2s ease-in-out 1.2s infinite;
 }
 
 @keyframes bounceCard {
@@ -67,19 +69,21 @@
 /* Subtle glowing pulse around the frame */
 @keyframes glowPulse {
   0% {
-    box-shadow: 0 0 10px rgba(255, 127, 80, 0.4),
-                0 0 20px rgba(255, 127, 80, 0.3);
+    box-shadow:
+      0 0 10px rgba(255, 127, 80, 0.4),
+      0 0 20px rgba(255, 127, 80, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 127, 80, 0.6),
-                0 0 40px rgba(255, 127, 80, 0.4);
+    box-shadow:
+      0 0 20px rgba(255, 127, 80, 0.6),
+      0 0 40px rgba(255, 127, 80, 0.4);
   }
   100% {
-    box-shadow: 0 0 10px rgba(255, 127, 80, 0.4),
-                0 0 20px rgba(255, 127, 80, 0.3);
+    box-shadow:
+      0 0 10px rgba(255, 127, 80, 0.4),
+      0 0 20px rgba(255, 127, 80, 0.3);
   }
 }
-
 
 /* Caption attached to frame bottom */
 .frame-caption {
@@ -126,7 +130,12 @@
   border: 2px solid #008080;
   background: #f5f5f5;
   /* ✨ Smooth transition */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Individual platform colors */
@@ -165,15 +174,31 @@
   animation: fadeUp 0.6s ease forwards;
 }
 
-.hero.in-view .social-icons .icon:nth-child(1) { animation-delay: 1s; }
-.hero.in-view .social-icons .icon:nth-child(2) { animation-delay: 1.2s; }
-.hero.in-view .social-icons .icon:nth-child(3) { animation-delay: 1.4s; }
-.hero.in-view .social-icons .icon:nth-child(4) { animation-delay: 1.6s; }
-.hero.in-view .social-icons .icon:nth-child(5) { animation-delay: 1.8s; }
+.hero.in-view .social-icons .icon:nth-child(1) {
+  animation-delay: 1s;
+}
+.hero.in-view .social-icons .icon:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.hero.in-view .social-icons .icon:nth-child(3) {
+  animation-delay: 1.4s;
+}
+.hero.in-view .social-icons .icon:nth-child(4) {
+  animation-delay: 1.6s;
+}
+.hero.in-view .social-icons .icon:nth-child(5) {
+  animation-delay: 1.8s;
+}
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Hover effect */
@@ -185,7 +210,6 @@
   color: #008080;
 }
 
-
 /* Buttons stagger */
 .hero-buttons .btn {
   opacity: 0;
@@ -196,14 +220,19 @@
   animation: fadeUp 0.6s ease forwards;
 }
 
-.hero.in-view .hero-buttons .btn:nth-child(1) { animation-delay: 2s; }
-.hero.in-view .hero-buttons .btn:nth-child(2) { animation-delay: 2.2s; }
+.hero.in-view .hero-buttons .btn:nth-child(1) {
+  animation-delay: 2s;
+}
+.hero.in-view .hero-buttons .btn:nth-child(2) {
+  animation-delay: 2.2s;
+}
 
 /* Buttons */
 .hero-buttons {
   display: flex;
   gap: 15px;
   justify-content: center;
+  text-decoration: none;
 }
 .btn {
   padding: 12px 24px;
@@ -224,6 +253,7 @@
   background: linear-gradient(to right, #e0f7f7 50%, #008080 50%);
   background-size: 200% 100%;
   background-position: left bottom;
+  text-decoration: none;
 }
 
 .btn.primary:hover {
@@ -234,15 +264,16 @@
 
 /* Secondary button with gradient hover */
 .btn.secondary {
-    border: 2px solid #ff7f50;
+  border: 2px solid #ff7f50;
   background: linear-gradient(to left, #ffe5d0 50%, #ff7f50 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   color: #ff7f50;
+  text-decoration: none;
 }
 
 .btn.secondary:hover {
-    color: #008080;
+  color: #008080;
   background-position: left bottom; /* animate left → right */
   transform: scale(1.08); /* zoom effect */
 }

@@ -18,7 +18,7 @@ const Hero = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -44,25 +44,72 @@ const Hero = () => {
         </h1>
         {/* Social icons */}
         <div className="social-icons">
-          <a href="https://yourwebsite.com" target="_blank" rel="noopener noreferrer" className="icon website">
+          <a
+            href="https://myprofilepo.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon website"
+          >
             <FontAwesomeIcon icon={faGlobe} />
           </a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="icon github">
+          <a
+            href="https://github.com/igopalakrishnan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon github"
+          >
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="icon linkedin">
+          <a
+            href="https://www.linkedin.com/in/igopalakrishnan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon linkedin"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="icon facebook">
+          <a
+            href="https://www.facebook.com/igopalakrishnan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon facebook"
+          >
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="icon instagram">
+          <a
+            href="https://www.instagram.com/i__gopalakrishnan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon instagram"
+          >
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
         <div className="hero-buttons">
-          <button className="btn primary">Resume</button>
-          <button className="btn secondary">Hire Me</button>
+          {/* Resume button */}
+          <a
+            href="/Resume.pdf" // place resume.pdf inside your public folder
+            target="_blank"
+            download="Gokul_Resume.pdf" // filename for download
+            rel="noopener noreferrer"
+            className="btn primary"
+          >
+            Resume
+          </a>
+
+          {/* Hire Me button */}
+          <a
+            href={`mailto:kingkrishna809@gmail.com
+      ?subject=Hiring%20Opportunity%20-%20Shortlist
+      &body=Greetings%20Gokul,%0D%0A%0D%0A
+      We%20are%20pleased%20to%20inform%20you%20that%20you%20have%20been%20shortlisted%20for%20a%20role%20at%20${encodeURIComponent("[CompanyName]")}.%0D%0A%0D%0A
+      Kindly%20share%20your%20availability%20for%20an%20interview.%0D%0A%0D%0A
+      Best%20wishes,%0D%0A
+      ${encodeURIComponent("[CompanyName]")}`}
+            className="btn secondary"
+          >
+            Hire Me
+          </a>
         </div>
       </div>
     </section>

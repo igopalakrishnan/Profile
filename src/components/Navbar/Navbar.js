@@ -24,8 +24,8 @@ const Navbar = () => {
           <ScrollLink to="about" smooth={true} duration={600} onClick={() => setIsOpen(false)}>About</ScrollLink>
           <ScrollLink to="skills" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Skills</ScrollLink>
           <ScrollLink to="projects" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Projects</ScrollLink>
-          <ScrollLink to="contact" smooth={true} duration={600} onClick={() => setIsOpen(false)} className="pill-btn">
-            Contact Me
+          <ScrollLink to="getInTouch" smooth={true} duration={600} onClick={() => setIsOpen(false)} className="pill-btn">
+             Get In Touch
           </ScrollLink>
         </div>
 
@@ -45,8 +45,8 @@ const Navbar = () => {
         <ScrollLink to="about" smooth={true} duration={600} onClick={() => setIsOpen(false)}>About</ScrollLink>
         <ScrollLink to="skills" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Skills</ScrollLink>
         <ScrollLink to="projects" smooth={true} duration={600} onClick={() => setIsOpen(false)}>Projects</ScrollLink>
-        <ScrollLink to="contact" smooth={true} duration={600} onClick={() => setIsOpen(false)} className="pill-btn">
-          Contact Me
+        <ScrollLink to="getInTouch" smooth={true} duration={600} onClick={() => setIsOpen(false)} className="pill-btn">
+          Get In Touch
         </ScrollLink>
       </div>
 

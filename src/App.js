@@ -8,6 +8,7 @@ import {
 import Navbar from "./components/Navbar/Navbar";
 import ProjectsPage from "./components/ProjectaPage/ProjectsPage";
 import Home from "./components/Home/Home";
+import ScrollToTop from "./components/ScrollToTop";
 
 function Layout() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function Layout() {
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout />
     </Router>
   );

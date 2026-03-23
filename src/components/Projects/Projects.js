@@ -3,26 +3,26 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./Projects.css";
 import portfolio from "../../assets/projects/portfolio.png";
 import photoCollage from "../../assets/projects/gallery.png";
-import todoList from "../../assets/projects/todoList.png";
+import BookKeeping from "../../assets/projects/bookKeeping.png";
 import { Link } from "react-router-dom";
 
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "Portfolio",
     desc: "Responsive portfolio",
     img: portfolio,
     link: "https://myprofilepo.netlify.app/",
   },
   {
-    title: "Chat App Website",
+    title: "Chat App",
     desc: "Interactive hero section...",
     img: photoCollage,
-    link: "#",
+    link: "https://chatapp-1-10fd.onrender.com",
   },
   {
-    title: "Book Keeping Website",
+    title: "Contact Management System",
     desc: "Canvas-style navbar...",
-    img: todoList,
+    img: BookKeeping,
     link: "#",
   },
 ];
@@ -104,8 +104,9 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="project-link"
+                  onClick={(e) => e.stopPropagation()} 
                 >
-                  View Code
+                  View Site
                 </a>
               </motion.div>
             );

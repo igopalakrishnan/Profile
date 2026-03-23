@@ -94,23 +94,30 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Canvas drawer */
+/* Full-page canvas overlay */
 .nav-links {
   position: fixed;
-  top: 0;
-  right: 0;
+  inset: 0;
   height: 100vh;
-  width: 250px;
-  background-color: #f2f2f2;
+  width: 100vw;
+
+  /* Gradient background with blur */
+  background: linear-gradient(
+    135deg,
+    rgba(0, 128, 128, 0.6),
+    rgba(255, 127, 80, 0.6)
+  );
+  backdrop-filter: blur(10px);
+
   display: flex;
   flex-direction: column;
-  padding: 60px 20px 20px;
-  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.15);
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
   transform: translateX(100%);
   opacity: 0;
-  transition:
-    transform 0.4s ease,
-    opacity 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
   z-index: 1004;
 }
 .nav-links.open {
@@ -126,18 +133,29 @@
   right: 20px;
 }
 
-/* Staggered link animation */
+/* Centered headings/links with glow pulse */
 .nav-links a {
   text-decoration: none;
-  color: teal;
-  font-weight: 500;
-  margin: 12px 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateY(20px);
+
+  /* Glow pulse effect */
+  text-shadow: 0 0 12px rgba(0, 128, 128, 0.6),
+               0 0 20px rgba(255, 127, 80, 0.5);
+  animation: glowPulse 3s ease-in-out infinite;
 }
 .nav-links.open a {
-  animation: slideFadeIn 0.4s forwards;
+  animation: fadeUp 0.5s forwards;
 }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .nav-links.open a:nth-child(2) {
   animation-delay: 0.1s;
 }
@@ -151,15 +169,12 @@
   animation-delay: 0.4s;
 }
 
-@keyframes slideFadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* Hamburger inside overlay */
+.nav-links .hamburger {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 /* Backdrop overlay with blur */

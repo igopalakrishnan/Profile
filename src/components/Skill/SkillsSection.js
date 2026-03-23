@@ -11,7 +11,7 @@ const skills = [
   "React",
   "Node.js",
   "Git",
-  "TypeScript",
+  "Sketch",
 ];
 
 const SkillsSection = () => {

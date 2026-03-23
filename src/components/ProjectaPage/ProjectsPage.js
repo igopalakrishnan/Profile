@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const projectsPage = [
   {
-    title: "Portfolio Website",
+    title: "Portfolio",
     desc: "Responsive portfolio...img: portfolio",
     img: portfolio,
     link: "https://myprofilepo.netlify.app/",
@@ -25,16 +25,16 @@ const projectsPage = [
     title: "ToDo List",
     desc: "Canvas-style navbar...",
     img: todoList,
-    link: "#",
+    link: "https://todo-mern-app-vb1d.onrender.com/",
   },
   {
-    title: "Chat App Website",
+    title: "Chat App",
     desc: "Canvas-style navbar...",
     img: chatApp,
-    link: "#",
+    link: "https://chatapp-1-10fd.onrender.com",
   },
   {
-    title: "Book Keeping Website",
+    title: "Contact Management System",
     desc: "Canvas-style navbar...",
     img: bookKeeping,
     link: "#",
@@ -135,8 +135,9 @@ export default function ProjectsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="projectsPage-link"
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  View Code
+                  View Site
                 </a>
               </motion.div>
             );

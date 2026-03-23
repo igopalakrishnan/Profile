@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.3b194104.css",
-    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.0b36bcc1.js",
+    "main.css": "https://igopalakrishnan.github.io/Profile/static/css/main.65efe90d.css",
+    "main.js": "https://igopalakrishnan.github.io/Profile/static/js/main.d9693a66.js",
     "static/js/787.f2a0fa2f.chunk.js": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js",
     "static/media/gallery.png": "https://igopalakrishnan.github.io/Profile/static/media/gallery.48621dc460ffa018b538.png",
     "static/media/todoList.png": "https://igopalakrishnan.github.io/Profile/static/media/todoList.cec6722fadbc0dd5e60a.png",
@@ -12,12 +12,12 @@
     "static/media/chatApp.png": "https://igopalakrishnan.github.io/Profile/static/media/chatApp.a3144e1ded9382cc9d19.png",
     "static/media/letsTalk.png": "https://igopalakrishnan.github.io/Profile/static/media/letsTalk.57cf34eda53bcaee331e.png",
     "index.html": "https://igopalakrishnan.github.io/Profile/index.html",
-    "main.3b194104.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.3b194104.css.map",
-    "main.0b36bcc1.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.0b36bcc1.js.map",
+    "main.65efe90d.css.map": "https://igopalakrishnan.github.io/Profile/static/css/main.65efe90d.css.map",
+    "main.d9693a66.js.map": "https://igopalakrishnan.github.io/Profile/static/js/main.d9693a66.js.map",
     "787.f2a0fa2f.chunk.js.map": "https://igopalakrishnan.github.io/Profile/static/js/787.f2a0fa2f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b194104.css",
-    "static/js/main.0b36bcc1.js"
+    "static/css/main.65efe90d.css",
+    "static/js/main.d9693a66.js"
   ]
 }

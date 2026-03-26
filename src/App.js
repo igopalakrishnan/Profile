@@ -6,7 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import ProjectsPage from "./components/ProjectaPage/ProjectsPage";
+import ProjectsPage from "./components/ProjectsPage/ProjectsPage";
 import Home from "./components/Home/Home";
 import ScrollToTop from "./components/ScrollToTop";
 

@@ -1,7 +1,57 @@
+.projectsPage-page {
+  min-height: 100vh;
+  background: #2b2a2a;
+  color: #fff;
+}
+
+.projectsPage-navbar {
+  display: flex;
+  justify-content: space-between; /* distribute logo, home, spacer */
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #f5f5f5;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Color when scrolled */
+.projectsPage-navbar.scrolled {
+  background-color: #e0f7f7; /* change to your preferred color */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.projectsPage-navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: teal;
+}
+
+.projectsPage-navbar .home-link {
+  flex: 1; /* take center space */
+  text-align: center; /* center text */
+  color: teal;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.projectsPage-navbar .home-link:hover {
+  color: coral;
+  transform: translateY(-3px) scale(1); /* subtle lift */
+  text-shadow: 0 10px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.projectsPage-navbar .spacer {
+  width: 50px; /* ensures balance on right side */
+}
+
 /* Section styling */
-.projects-section {
+.projectsPage-section {
   position: relative;
-  padding: 15rem 2rem;
+  padding: 5rem 2rem;
   padding-bottom: 5rem;
   background: #2b2a2a;
   color: #fff;
@@ -16,15 +66,14 @@
   text-shadow: 0 0 10px teal;
 }
 
-/* Grid layout */
-.projects-grid {
+.projectsPage-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 /* Base card */
-.project-card {
+.projectsPage-card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 1.5rem;
@@ -39,7 +88,7 @@
 }
 
 /* Image */
-.project-img {
+.projectsPage-img {
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -47,19 +96,19 @@
 }
 
 /* Title & description */
-.project-title {
+.projectsPage-title {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   transition: color 0.6s ease;
 }
 
-.project-desc {
+.projectsPage-desc {
   font-size: clamp(0.9rem, 1.5vw, 1rem);
   line-height: 1.4;
   transition: color 0.6s ease;
 }
 
 /* Link button */
-.project-link {
+.projectsPage-link {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -71,40 +120,40 @@
 }
 
 /* Alternating idle glow + text + button */
-.projects-grid .project-card:nth-child(odd) {
+.projectsPage-grid .projectsPage-card:nth-child(odd) {
   animation: coralPulse 3s infinite alternate;
   border-color: coral;
   box-shadow: inset 0 0 12px rgba(255, 127, 80, 0.4);
 }
-.projects-grid .project-card:nth-child(odd) .project-title {
+.projectsPage-grid .projectsPage-card:nth-child(odd) .projectsPage-title {
   color: teal;
 }
-.projects-grid .project-card:nth-child(odd) .project-desc {
+.projectsPage-grid .projectsPage-card:nth-child(odd) .projectsPage-desc {
   color: #ffd9c9;
 }
-.projects-grid .project-card:nth-child(odd) .project-link {
+.projectsPage-grid .projectsPage-card:nth-child(odd) .projectsPage-link {
   background: teal;
   color: coral;
 }
 
-.projects-grid .project-card:nth-child(even) {
+.projectsPage-grid .projectsPage-card:nth-child(even) {
   animation: tealPulse 3s infinite alternate;
   border-color: teal;
   box-shadow: inset 0 0 12px rgba(0, 128, 128, 0.4);
 }
-.projects-grid .project-card:nth-child(even) .project-title {
+.projectsPage-grid .projectsPage-card:nth-child(even) .projectsPage-title {
   color: coral;
 }
-.projects-grid .project-card:nth-child(even) .project-desc {
+.projectsPage-grid .projectsPage-card:nth-child(even) .projectsPage-desc {
   color: #b2f5f5;
 }
-.projects-grid .project-card:nth-child(even) .project-link {
+.projectsPage-grid .projectsPage-card:nth-child(even) .projectsPage-link {
   background: coral;
   color: teal;
 }
 
 /* Hover swaps everything */
-.projects-grid .project-card:nth-child(odd):hover {
+.projectsPage-grid .projectsPage-card:nth-child(odd):hover {
   transform: translateY(-8px) scale(1.05);
   box-shadow:
     0 0 25px teal,
@@ -118,15 +167,15 @@
   );
   border-color: teal;
 }
-.projects-grid .project-card:nth-child(odd):hover .project-title {
+.projectsPage-grid .projectsPage-card:nth-child(odd):hover .projectsPage-title {
   color: coral;
 }
-.projects-grid .project-card:nth-child(odd):hover .project-link {
+.projectsPage-grid .projectsPage-card:nth-child(odd):hover .projectsPage-link {
   background: coral;
   color: teal;
 }
 
-.projects-grid .project-card:nth-child(even):hover {
+.projectsPage-grid .projectsPage-card:nth-child(even):hover {
   transform: translateY(-8px) scale(1.05);
   box-shadow:
     0 0 25px coral,
@@ -140,10 +189,12 @@
   );
   border-color: coral;
 }
-.projects-grid .project-card:nth-child(even):hover .project-title {
+.projectsPage-grid
+  .projectsPage-card:nth-child(even):hover
+  .projectsPage-title {
   color: teal;
 }
-.projects-grid .project-card:nth-child(even):hover .project-link {
+.projectsPage-grid .projectsPage-card:nth-child(even):hover .projectsPage-link {
   background: teal;
   color: coral;
 }
@@ -196,29 +247,29 @@
 /* Default modal content */
 .modal-content {
   display: flex;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   overflow: hidden;
   max-width: 900px;
   width: 90%;
   animation: fadeIn 0.4s ease;
   position: relative;
-  top: 1.5rem;
 }
 
 /* Mobile adjustments (not fullscreen, scrollable if needed) */
 @media (max-width: 768px) {
   .modal-content {
-    flex-direction: column;   /* stack image and text vertically */
-    width: 95%;               /* keep it centered */
-    max-width: 600px;         /* cap width for readability */
-    max-height: 90vh;         /* limit height to viewport */
-    overflow-y: auto;         /* enable vertical scroll if content is long */
-    border-radius: 12px;      /* keep rounded corners */
+    flex-direction: column; /* stack image and text vertically */
+    width: 95%; /* keep it centered */
+    max-width: 600px; /* cap width for readability */
+    max-height: 90vh; /* limit height to viewport */
+    overflow-y: auto; /* enable vertical scroll if content is long */
+    border-radius: 12px; /* keep rounded corners */
     margin-top: 7rem;
   }
 
-  .modal-left, .modal-right {
+  .modal-left,
+  .modal-right {
     flex: none;
     width: 100%;
     height: auto;
@@ -227,15 +278,14 @@
   .modal-left img {
     width: 100%;
     height: auto;
-    object-fit: contain;      /* image scales nicely without cropping */
+    object-fit: contain; /* image scales nicely without cropping */
   }
 }
 
-
 /* Close button ABOVE modal */
-.close {
+.page-close {
   position: absolute;
-  top: 10%;
+  top: 5%;
   right: 5%;
   font-size: 2.5rem;
   color: #fff;
@@ -249,7 +299,7 @@
 }
 
 /* Hover effect: glow swap coral ↔ teal */
-.close:hover {
+.page-close:hover {
   color: coral;
   text-shadow:
     0 0 12px teal,
@@ -269,15 +319,26 @@
   }
 }
 
+
+.modal-content {
+  display: flex;
+  max-width: 900px;
+  width: 90%;
+  height: 80vh;              /* fix modal height */
+  overflow: hidden;          /* prevent whole modal scroll */
+}
 /* Left image */
 .modal-left {
   flex: 1;
+  display: flex;
+  justify-content: center;   /* center image horizontally */
+  align-items: center;       /* center image vertically */
   background: #f5f5f5;
 }
 .modal-left img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  display: block;
+  object-fit: contain;
 }
 
 /* Right content */
@@ -286,7 +347,9 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* prevent whole panel scroll */
 }
 /* Modal title base */
 .modal-title {
@@ -297,22 +360,35 @@
     text-shadow 0.6s ease;
 }
 .modal-desc {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #f5f5f5;
+  flex: 1;          /* fills remaining space */
+  overflow-y: auto; /* scroll only desc */
+  white-space: pre-line;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #fff;
 }
+.modal-desc li {
+  margin-bottom: 0.5rem;
+}
+
 /* Modal button base */
 .modal-link {
   display: inline-block;
-  margin: 1rem auto;       /* centers horizontally */
+  margin: 1rem auto; /* centers horizontally */
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
   color: #fff;
   text-decoration: none;
   text-align: center;
-  transition: background 0.6s ease, color 0.6s ease, box-shadow 0.6s ease;
-  width: fit-content;      /* hugs content */
-  max-width: 90%;          /* prevents overflow on small screens */
+  transition:
+    background 0.6s ease,
+    color 0.6s ease,
+    box-shadow 0.6s ease;
+  width: fit-content; /* hugs content */
+  max-width: 90%; /* prevents overflow on small screens */
 }
 .modal-link:hover {
   background: coral;
@@ -321,9 +397,9 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .modal-link {
-    width: auto;           /* keep content width */
-    max-width: 90%;        /* safe margin */
-    font-size: 1.1rem;     /* readable on small screens */
+    width: auto; /* keep content width */
+    max-width: 90%; /* safe margin */
+    font-size: 1.1rem; /* readable on small screens */
   }
 }
 
@@ -392,24 +468,47 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .modal-content {
-    flex-direction: column;
+    flex-direction: column;   /* stack vertically */
+    width: 95%;
+    max-width: 600px;
+    height: 90vh;             /* same fixed height as desktop */
+    overflow: hidden;
   }
-  .modal-left,
-  .modal-right {
-    flex: none;
+
+  .modal-left {
     width: 100%;
+    flex: none;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-right {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;         /* prevent whole panel scroll */
+  }
+
+  .modal-desc {
+    flex: 1;
+    overflow-y: auto;         /* scroll only desc */
+    max-height: 100%;         /* ensures full scroll area */
   }
 }
 
-.projects-footer {
+
+
+.projectsPage-footer {
   text-align: center;
   margin-top: 5rem;
 }
 
-.projects-button {
+.projectsPage-button {
   padding: 0.8rem 1.6rem;
   border-radius: 25px;
   border: none;
@@ -417,12 +516,15 @@
   font-size: 1rem;
   font-weight: 600;
   background: teal;
-  text-decoration: none;
   color: coral;
-  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  transition:
+    background 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.projects-button:hover {
+.projectsPage-button:hover {
   background: coral;
   color: teal;
   transform: scale(1.05);
@@ -430,8 +532,8 @@
 }
 
 @media (max-width: 768px) {
-  .projects-button {
-    width: 90%;       /* full width on mobile */
+  .projectsPage-button {
+    width: 90%; /* full width on mobile */
     font-size: 1.1rem;
   }
 }

@@ -1,42 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Projects.css";
+import "./ProjectsPage.css";
+import gallery from "../../assets/projects/gallery.png";
+import portfolio from "../../assets/projects/portfolio.png";
 import todoList from "../../assets/projects/todoList.png";
 import chatApp from "../../assets/projects/chatApp.png";
 import contact from "../../assets/projects/contact.png";
 import { Link } from "react-router-dom";
 
-const projects = [
+const projectsPage = [
   {
-    title: "Chat App",
+    title: "Portfolio",
     desc: [
-      "💬 Real‑time messaging powered by Socket.IO for instant communication",
-      "🔒 Secure authentication with JWT and bcrypt",
-      "🗄️ MongoDB database for storing messages, profiles, and chat history",
-      "⚡ Express.js APIs for routing, user management, and group creation",
-      "⚛️ React frontend with responsive, modern UI",
-      "👥 Private chats with dynamic room management",
-      "🖼️ Profile customization with avatars and online/offline indicators",
-      "🚀 Deployed on Render",
-      "📂 Scalable architecture ready for file sharing",
+      "⚛️ Built with React for modular, reusable components",
+      "🎨 Coral and teal branding with clean, modern UI design",
+      "📱 Responsive layouts that adapt seamlessly across devices",
+      "✨ Smooth animations — ripple entrances, overlay fades, glow swaps",
+      "🔗 Dynamic routing for fast navigation between sections",
+      "🛠️ Modular CSS & Font Awesome icons for maintainability and polish",
+      "🚀 Deployed on Netlify",
     ],
-    img: chatApp,
-    link: "https://chatapp-1-10fd.onrender.com",
+    img: portfolio,
+    link: "https://myprofilepo.netlify.app/",
   },
   {
-    title: "Contact Management System",
-    desc: [
-      "📇 Manage all contacts in one place with clean, intuitive UI",
-      "🔍 Track lead status: Interested, Follow‑ups, Closed, and more",
-      "❌ Delete contact instantly",
-      "🗄️ MongoDB database for storing contact details and activity history",
-      "⚛️ React frontend with responsive layouts for desktop",
-      "⚡ Express.js APIs for CRUD operations and status updates",
-      "📊 Dashboard view to monitor progress across different statuses",
-      "🚀 Deployed on Netlify (frontend) and Render (backend) with environment variable management",
-    ],
-    img: contact,
-    link: "https://mern-contact-management.netlify.app",
+    title: "Photo Collage",
+   desc: [
+    "🖼️ Built entirely with React for dynamic rendering and modular components",
+    "📂 Organize and display photos in responsive grid layouts",
+    "✨ Smooth animations for gallery transitions and hover effects",
+    "📱 Responsive design that adapts seamlessly across devices",
+    "🛠️ Modular CSS & Font Awesome icons for maintainability and polish",
+    "🚀 Deployed on Netlify for fast, reliable hosting"
+  ],
+    img: gallery,
+    link: "https://weshinememories.netlify.app/",
   },
   {
     title: "ToDo List",
@@ -53,10 +51,42 @@ const projects = [
     img: todoList,
     link: "https://todo-mern-app-vb1d.onrender.com/",
   },
+  {
+    title: "Chat App",
+     desc: [
+      "💬 Real‑time messaging powered by Socket.IO for instant communication",
+      "🔒 Secure authentication with JWT and bcrypt",
+      "🗄️ MongoDB database for storing messages, profiles, and chat history",
+      "⚡ Express.js APIs for routing, user management, and group creation",
+      "⚛️ React frontend with responsive, modern UI",
+      "👥 Private chats with dynamic room management",
+      "🖼️ Profile customization with avatars and online/offline indicators",
+      "🚀 Deployed on Render",
+      "📂 Scalable architecture ready for file sharing",
+    ],
+    img: chatApp,
+    link: "https://chatapp-1-10fd.onrender.com",
+  },
+  {
+    title: "Contact Management System",
+     desc: [
+      "📇 Manage all contacts in one place with clean, intuitive UI",
+      "🔍 Track lead status: Interested, Follow‑ups, Closed, and more",
+      "❌ Delete contact instantly",
+      "🗄️ MongoDB database for storing contact details and activity history",
+      "⚛️ React frontend with responsive layouts for desktop",
+      "⚡ Express.js APIs for CRUD operations and status updates",
+      "📊 Dashboard view to monitor progress across different statuses",
+      "🚀 Deployed on Netlify (frontend) and Render (backend) with environment variable management",
+    ],
+    img: contact,
+    link: "https://mern-contact-management.netlify.app",
+  },
 ];
 
-export default function Projects() {
+export default function ProjectsPage() {
   const [activeProject, setActiveProject] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -100,38 +130,54 @@ export default function Projects() {
     },
   };
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
+      <nav className={`projectsPage-navbar ${scrolled ? "scrolled" : ""}`}>
+        <div className="logo">GK</div>
+        <Link to="/" className="home-link">
+          Home
+        </Link>
+        <div className="spacer"></div> {/* empty div to balance flex */}
+      </nav>
       <motion.section
-        id="projects"
-        className="projects-section"
+        id="projectsPage"
+        className="projectsPage-section"
         initial="hidden"
         whileInView="visible"
+        animate="visible"
         exit="exit"
-        // viewport={{ once: false, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         variants={sectionVariants}
       >
-        <h2 className="section-title">Live Projects</h2>
-        <div className="projects-grid">
-          {projects.map((proj, index) => {
+        <h2 className="section-title">All Projects</h2>
+        <div className="projectsPage-grid">
+          {projectsPage.map((proj, index) => {
             const glowClass = index % 2 === 0 ? "coral-glow" : "teal-glow";
             return (
               <motion.div
-                key={index}
-                className={`project-card ${glowClass}`}
+                key={proj.title} // use unique key instead of index
+                className={`projectsPage-card ${glowClass}`}
                 custom={index}
                 variants={cardVariants}
-                style={{ animationDelay: `${1 + index * 0.3}s` }}
                 onClick={() => setActiveProject({ ...proj, index })}
               >
-                <img src={proj.img} alt={proj.title} className="project-img" />
-                <h3 className="project-title">{proj.title}</h3>
-                {/* <p className="project-desc">{proj.desc}</p> */}
+                <img
+                  src={proj.img}
+                  alt={proj.title}
+                  className="projectsPage-img"
+                />
+                <h3 className="projectsPage-title">{proj.title}</h3>
                 <a
                   href={proj.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project-link"
+                  className="projectsPage-link"
                   onClick={(e) => e.stopPropagation()}
                 >
                   View Site
@@ -140,11 +186,11 @@ export default function Projects() {
             );
           })}
         </div>
-        <div className="projects-footer">
-          <Link to="/projectsPage" className="projects-button">
+        {/* <div className="projectsPage-footer">
+          <Link to="/projectsPage" className="projectsPage-button">
             See All Projects
           </Link>
-        </div>
+        </div> */}
       </motion.section>
 
       <AnimatePresence>
@@ -158,7 +204,7 @@ export default function Projects() {
             onClick={() => setActiveProject(null)}
           >
             {/* Close button ABOVE modal */}
-            <span className="close" onClick={() => setActiveProject(null)}>
+            <span className="page-close" onClick={() => setActiveProject(null)}>
               &times;
             </span>
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./ProjectsPage.css";
-import gallery from "../../assets/projects/gallery.png";
+import learning from "../../assets/projects/learning.png";
 import portfolio from "../../assets/projects/portfolio.png";
 import todoList from "../../assets/projects/todoList.png";
 import chatApp from "../../assets/projects/chatApp.png";
@@ -24,41 +24,21 @@ const projectsPage = [
     link: "https://myprofilepo.netlify.app/",
   },
   {
-    title: "Photo Collage",
+    title: "AI Learning Assistant",
    desc: [
-    "🖼️ Built entirely with React for dynamic rendering and modular components",
-    "📂 Organize and display photos in responsive grid layouts",
-    "✨ Smooth animations for gallery transitions and hover effects",
-    "📱 Responsive design that adapts seamlessly across devices",
-    "🛠️ Modular CSS & Font Awesome icons for maintainability and polish",
-    "🚀 Deployed on Netlify for fast, reliable hosting"
+    
   ],
-    img: gallery,
-    link: "https://weshinememories.netlify.app/",
-  },
-  {
-    title: "ToDo List",
-    desc: [
-    "📝 Create tasks with titles, descriptions",
-    "📖 Read and view all tasks in a clean dashboard",
-    "✏️ Edit tasks seamlessly with inline updates",
-    "❌ Delete tasks instantly with confirmation prompts",
-    "🗄️ MongoDB database for storing tasks and user data",
-    "⚛️ React frontend with responsive, modern UI",
-    "⚡ Express.js APIs for CRUD operations",
-    "🚀 Deployed on Render"
-  ],
-    img: todoList,
-    link: "https://todo-mern-app-vb1d.onrender.com/",
+    img: learning,
+    link: "https://ai-learning-assistant.netlify.app/login",
   },
   {
     title: "Chat App",
      desc: [
       "💬 Real‑time messaging powered by Socket.IO for instant communication",
       "🔒 Secure authentication with JWT and bcrypt",
-      "🗄️ MongoDB database for storing messages, profiles, and chat history",
+      "🍃 MongoDB database for storing messages, profiles, and chat history",
       "⚡ Express.js APIs for routing, user management, and group creation",
-      "⚛️ React frontend with responsive, modern UI",
+      "⚛️ React + ⚡ Vite frontend with responsive, modern UI",
       "👥 Private chats with dynamic room management",
       "🖼️ Profile customization with avatars and online/offline indicators",
       "🚀 Deployed on Render",
@@ -73,14 +53,29 @@ const projectsPage = [
       "📇 Manage all contacts in one place with clean, intuitive UI",
       "🔍 Track lead status: Interested, Follow‑ups, Closed, and more",
       "❌ Delete contact instantly",
-      "🗄️ MongoDB database for storing contact details and activity history",
-      "⚛️ React frontend with responsive layouts for desktop",
+      "🍃 MongoDB database for storing contact details and activity history",
+      "⚛️ React + ⚡ Vite frontend with responsive layouts for desktop",
       "⚡ Express.js APIs for CRUD operations and status updates",
       "📊 Dashboard view to monitor progress across different statuses",
       "🚀 Deployed on Netlify (frontend) and Render (backend) with environment variable management",
     ],
     img: contact,
     link: "https://mern-contact-management.netlify.app",
+  },
+  {
+    title: "ToDo List",
+    desc: [
+    "📝 Create tasks with titles, descriptions",
+    "📖 Read and view all tasks in a clean dashboard",
+    "✏️ Edit tasks seamlessly with inline updates",
+    "❌ Delete tasks instantly with confirmation prompts",
+    "🍃 MongoDB database for storing tasks and user data",
+    "⚛️ React frontend with responsive, modern UI",
+    "⚡ Express.js APIs for CRUD operations",
+    "🚀 Deployed on Render"
+  ],
+    img: todoList,
+    link: "https://todo-mern-app-vb1d.onrender.com/",
   },
 ];
 
@@ -240,7 +235,7 @@ export default function ProjectsPage() {
                   rel="noopener noreferrer"
                   className={`modal-link ${activeProject.index % 2 === 0 ? "coral-btn" : "teal-btn"}`}
                 >
-                  View Code
+                  View Site
                 </a>
               </div>
             </motion.div>

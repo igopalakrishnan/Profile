@@ -71,7 +71,7 @@
     left: 60%;
   }
   .skills-section {
-    min-height: 15vh !important;
+    min-height: 35vh !important;
   }
 }
 @media (max-width: 1440px) {
@@ -83,7 +83,7 @@
     left: 60%;
   }
   .skills-section {
-    min-height: 20vh !important;
+    min-height: 35vh !important;
   }
 }
 @media screen and (min-width: 1024px) and (Max-width: 1440px) {
@@ -95,7 +95,7 @@
     left: 53%;
   }
   .skills-section {
-    min-height: 30vh !important;
+    min-height: 35vh !important;
     padding: 0 100px !important;
   }
 }

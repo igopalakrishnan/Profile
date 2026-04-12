@@ -27,7 +27,7 @@ const About = () => {
           <h2>About Me</h2>
           <p>
             <strong>
-              A skilled <span>Full Stack Developer</span> with 3+ years of experience in designing and
+              A skilled <span>Full Stack Developer</span> with experience in designing and
               implementing web applications using a variety of front-end and
               back-end technologies. Proficient in both client-side and
               server-side development, with hands-on expertise in

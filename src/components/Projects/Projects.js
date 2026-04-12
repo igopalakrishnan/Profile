@@ -3,17 +3,43 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./Projects.css";
 import learning from "../../assets/projects/learning.png";
 import chatApp from "../../assets/projects/chatApp.png";
-import contact from "../../assets/projects/contact.png";
+import interview from "../../assets/projects/interview.png";
 import { Link } from "react-router-dom";
 
 const projects = [
   {
     title: "AI Learning Assistant",
-   desc: [
-    
-  ],
+    desc: [
+      "📂 Upload documents to generate study material automatically",
+      "🃏 Smart flashcard creation for key concepts and definitions",
+      "📝 AI‑generated quizzes to test comprehension",
+      "❓ Ask questions directly to the AI for instant explanations",
+      "📊 Review results with detailed performance analytics",
+      "🔒 Secure authentication with JWT and bcrypt",
+      "🍃 MongoDB database for storing documents, cards, and quiz history",
+      "⚡ Express.js APIs for content parsing, quiz generation, and user management",
+      "⚛️ React + ⚡ Vite frontend with responsive, interactive UI",
+      "🔄 Continuous learning loop with flashcard review and spaced repetition",
+      "🚀 Deployed on Render and Netlify for seamless access",
+    ],
     img: learning,
     link: "https://ai-learning-assistant.netlify.app/login",
+  },
+  {
+    title: "AI Interview Preparation",
+    desc: [
+      "🃏 Dynamic role cards for Role, Experience, and Language",
+      "🤖 AI‑generated interview questions tailored to each card",
+      "📂 MongoDB database for storing roles, sessions, and progress",
+      "⚡ Express.js APIs for question generation, scoring, and user management",
+      "⚛️ React + ⚡ Vite frontend with responsive, modern UI",
+      "🧠 Expandable drawer to reveal detailed concepts when clicking questions",
+      "🔒 Secure authentication with JWT and bcrypt",
+      "🔄 Continuous learning loop with question practice and concept review",
+      "🚀 Deployed on Render and Netlify for seamless global access",
+    ],
+    img: interview,
+    link: "https://ai-interviews-preparation.netlify.app",
   },
   {
     title: "Chat App",
@@ -30,21 +56,6 @@ const projects = [
     ],
     img: chatApp,
     link: "https://chatapp-1-10fd.onrender.com",
-  },
-  {
-    title: "Contact Management System",
-    desc: [
-      "📇 Manage all contacts in one place with clean, intuitive UI",
-      "🔍 Track lead status: Interested, Follow‑ups, Closed, and more",
-      "❌ Delete contact instantly",
-      "🍃 MongoDB database for storing contact details and activity history",
-      "⚛️ React + ⚡ Vite frontend with responsive layouts for desktop",
-      "⚡ Express.js APIs for CRUD operations and status updates",
-      "📊 Dashboard view to monitor progress across different statuses",
-      "🚀 Deployed on Netlify (frontend) and Render (backend) with environment variable management",
-    ],
-    img: contact,
-    link: "https://mern-contact-management.netlify.app",
   },
 ];
 

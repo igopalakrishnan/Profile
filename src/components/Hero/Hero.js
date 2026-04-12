@@ -88,7 +88,7 @@ const Hero = () => {
         <div className="hero-buttons">
           {/* Resume button */}
           <a
-            href="/Resume.pdf" // place resume.pdf inside your public folder
+            href="/Gokul's Resume.pdf" // place resume.pdf inside your public folder
             target="_blank"
             download="Gokul_Resume.pdf" // filename for download
             rel="noopener noreferrer"

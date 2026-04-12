@@ -7,6 +7,7 @@ import todoList from "../../assets/projects/todoList.png";
 import chatApp from "../../assets/projects/chatApp.png";
 import contact from "../../assets/projects/contact.png";
 import { Link } from "react-router-dom";
+import interview from "../../assets/projects/interview.png";
 
 const projectsPage = [
   {
@@ -25,15 +26,41 @@ const projectsPage = [
   },
   {
     title: "AI Learning Assistant",
-   desc: [
-    
-  ],
+    desc: [
+      "📂 Upload documents to generate study material automatically",
+      "🃏 Smart flashcard creation for key concepts and definitions",
+      "📝 AI‑generated quizzes to test comprehension",
+      "❓ Ask questions directly to the AI for instant explanations",
+      "📊 Review results with detailed performance analytics",
+      "🔒 Secure authentication with JWT and bcrypt",
+      "🍃 MongoDB database for storing documents, cards, and quiz history",
+      "⚡ Express.js APIs for content parsing, quiz generation, and user management",
+      "⚛️ React + ⚡ Vite frontend with responsive, interactive UI",
+      "🔄 Continuous learning loop with flashcard review and spaced repetition",
+      "🚀 Deployed on Render and Netlify for seamless access",
+    ],
     img: learning,
     link: "https://ai-learning-assistant.netlify.app/login",
   },
   {
+    title: "AI Interview Preparation",
+    desc: [
+      "🃏 Dynamic role cards for Role, Experience, and Language",
+      "🤖 AI‑generated interview questions tailored to each card",
+      "📂 MongoDB database for storing roles, sessions, and progress",
+      "⚡ Express.js APIs for question generation, scoring, and user management",
+      "⚛️ React + ⚡ Vite frontend with responsive, modern UI",
+      "🧠 Expandable drawer to reveal detailed concepts when clicking questions",
+      "🔒 Secure authentication with JWT and bcrypt",
+      "🔄 Continuous learning loop with question practice and concept review",
+      "🚀 Deployed on Render and Netlify for seamless global access",
+    ],
+    img: interview,
+    link: "https://ai-interviews-preparation.netlify.app",
+  },
+  {
     title: "Chat App",
-     desc: [
+    desc: [
       "💬 Real‑time messaging powered by Socket.IO for instant communication",
       "🔒 Secure authentication with JWT and bcrypt",
       "🍃 MongoDB database for storing messages, profiles, and chat history",
@@ -49,7 +76,7 @@ const projectsPage = [
   },
   {
     title: "Contact Management System",
-     desc: [
+    desc: [
       "📇 Manage all contacts in one place with clean, intuitive UI",
       "🔍 Track lead status: Interested, Follow‑ups, Closed, and more",
       "❌ Delete contact instantly",
@@ -65,15 +92,15 @@ const projectsPage = [
   {
     title: "ToDo List",
     desc: [
-    "📝 Create tasks with titles, descriptions",
-    "📖 Read and view all tasks in a clean dashboard",
-    "✏️ Edit tasks seamlessly with inline updates",
-    "❌ Delete tasks instantly with confirmation prompts",
-    "🍃 MongoDB database for storing tasks and user data",
-    "⚛️ React frontend with responsive, modern UI",
-    "⚡ Express.js APIs for CRUD operations",
-    "🚀 Deployed on Render"
-  ],
+      "📝 Create tasks with titles, descriptions",
+      "📖 Read and view all tasks in a clean dashboard",
+      "✏️ Edit tasks seamlessly with inline updates",
+      "❌ Delete tasks instantly with confirmation prompts",
+      "🍃 MongoDB database for storing tasks and user data",
+      "⚛️ React frontend with responsive, modern UI",
+      "⚡ Express.js APIs for CRUD operations",
+      "🚀 Deployed on Render",
+    ],
     img: todoList,
     link: "https://todo-mern-app-vb1d.onrender.com/",
   },

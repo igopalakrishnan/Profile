@@ -23,6 +23,12 @@
   color: #008080;
 }
 
+.logo img {
+  max-width: 100%;
+  height: 40px;
+  font-weight: 900;
+}
+
 /* Desktop links */
 .desktop-links {
   display: flex;
